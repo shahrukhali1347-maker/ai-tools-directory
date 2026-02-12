@@ -1,0 +1,66 @@
+import { SiteConfig } from '@/types';
+
+export const SITE_CONFIG: SiteConfig = {
+  name: "AI Tools Hub",
+  description: "Discover, compare, and choose from 2000+ AI tools across 50+ categories. Find the perfect AI solution for your needs with detailed reviews, comparisons, and implementation guides.",
+  url: "https://aitoolshub.com",
+  ogImage: "https://aitoolshub.com/og-image.jpg",
+  social: {
+    twitter: "https://twitter.com/aitoolshub",
+    linkedin: "https://linkedin.com/company/aitoolshub",
+    youtube: "https://youtube.com/@aitoolshub",
+  },
+  analytics: {
+    googleAnalyticsId: "G-XXXXXXXXXX",
+  },
+  stats: {
+    toolsCount: 2000,
+    categoriesCount: 50,
+    reviewsCount: 15000,
+    usersCount: 100000,
+  },
+};
+
+export const NAV_LINKS = [
+  { label: "Tools", href: "/tools" },
+  { label: "Categories", href: "/categories" },
+  { label: "Collections", href: "/collections" },
+  { label: "Guides", href: "/guides" },
+  { label: "Submit Tool", href: "/submit" },
+];
+
+export const FEATURED_CATEGORIES = [
+  "chatbots",
+  "image-generation",
+  "content-creation",
+  "code-assistance",
+  "video-generation",
+  "productivity",
+];
+
+export const PRICING_FILTERS = [
+  { label: "Free", value: "free" },
+  { label: "Freemium", value: "freemium" },
+  { label: "Paid", value: "paid" },
+];
+
+export const PLATFORM_FILTERS = [
+  { label: "Web", value: "web" },
+  { label: "iOS", value: "ios" },
+  { label: "Android", value: "android" },
+  { label: "Desktop", value: "desktop" },
+  { label: "API", value: "api" },
+];
+
+export const RATING_FILTERS = [
+  { label: "4+ Stars", value: 4 },
+  { label: "3+ Stars", value: 3 },
+  { label: "2+ Stars", value: 2 },
+];
+
+export const SORT_OPTIONS = [
+  { label: "Most Popular", value: "popular" },
+  { label: "Newest", value: "newest" },
+  { label: "Highest Rated", value: "rating" },
+  { label: "Name A-Z", value: "name" },
+];

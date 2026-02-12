@@ -1,0 +1,176 @@
+import { Category } from '@/types';
+
+export const categories: Category[] = [
+  {
+    id: '1',
+    name: 'Chatbots & Conversational AI',
+    slug: 'chatbots',
+    description: 'AI chatbots, virtual assistants, and conversational interfaces for customer support, personal assistance, and interactive experiences.',
+    icon: 'MessageSquare',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop',
+    color: 'bg-blue-500',
+    toolCount: 10,
+    popular: true,
+    seo: {
+      metaTitle: 'Best AI Chatbots & Conversational AI Tools (2025)',
+      metaDescription: 'Discover the best AI chatbots including ChatGPT, Claude, Gemini, and more. Compare features, pricing, and find the perfect conversational AI for your needs.',
+      keywords: ['ai chatbot', 'chatgpt', 'conversational ai', 'virtual assistant', 'ai assistant'],
+    },
+  },
+  {
+    id: '2',
+    name: 'Image Generation',
+    slug: 'image-generation',
+    description: 'AI-powered image creation, art generation, and visual design tools for creating stunning visuals from text descriptions.',
+    icon: 'Image',
+    image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=600&fit=crop',
+    color: 'bg-purple-500',
+    toolCount: 10,
+    popular: true,
+    seo: {
+      metaTitle: 'Best AI Image Generators - Midjourney, DALL-E & More (2025)',
+      metaDescription: 'Explore top AI image generators including Midjourney, DALL-E, Stable Diffusion, and more. Create stunning AI art and visuals.',
+      keywords: ['ai image generator', 'midjourney', 'dall-e', 'stable diffusion', 'ai art', 'text to image'],
+    },
+  },
+  {
+    id: '3',
+    name: 'Content Creation & Writing',
+    slug: 'content-creation',
+    description: 'AI writing assistants, copywriting tools, and content generation platforms for blogs, marketing, and professional communication.',
+    icon: 'FileText',
+    image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=600&fit=crop',
+    color: 'bg-green-500',
+    toolCount: 10,
+    popular: true,
+    seo: {
+      metaTitle: 'Best AI Writing & Content Creation Tools (2025)',
+      metaDescription: 'Find the best AI writing tools for content creation, copywriting, and blogging. Compare Jasper, Copy.ai, Grammarly, and more.',
+      keywords: ['ai writing tool', 'content creation', 'copywriting ai', 'blog writing', 'ai content generator'],
+    },
+  },
+  {
+    id: '4',
+    name: 'Code Assistance',
+    slug: 'code-assistance',
+    description: 'AI coding assistants, code completion tools, and development aids for faster, smarter programming.',
+    icon: 'Code',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop',
+    color: 'bg-yellow-500',
+    toolCount: 10,
+    popular: true,
+    seo: {
+      metaTitle: 'Best AI Coding Assistants - GitHub Copilot, Cursor & More (2025)',
+      metaDescription: 'Discover the best AI coding assistants for developers. Compare GitHub Copilot, Cursor, Tabnine, and other AI programming tools.',
+      keywords: ['ai coding assistant', 'github copilot', 'cursor', 'code completion', 'ai programming'],
+    },
+  },
+  {
+    id: '5',
+    name: 'Video Generation & Editing',
+    slug: 'video-generation',
+    description: 'AI video creation, editing, and enhancement tools for content creators, marketers, and businesses.',
+    icon: 'Video',
+    image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=600&fit=crop',
+    color: 'bg-red-500',
+    toolCount: 10,
+    popular: true,
+    seo: {
+      metaTitle: 'Best AI Video Generation & Editing Tools (2025)',
+      metaDescription: 'Create stunning videos with AI. Explore Runway, Synthesia, HeyGen, and other AI video tools for content creation.',
+      keywords: ['ai video generator', 'ai video editing', 'runway', 'synthesia', 'video creation'],
+    },
+  },
+  {
+    id: '6',
+    name: 'Audio & Music',
+    slug: 'audio-music',
+    description: 'AI voice generation, music creation, audio enhancement, and sound design tools for creators and professionals.',
+    icon: 'Music',
+    image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&h=600&fit=crop',
+    color: 'bg-pink-500',
+    toolCount: 10,
+    popular: true,
+    seo: {
+      metaTitle: 'Best AI Voice & Music Generation Tools (2025)',
+      metaDescription: 'Discover AI tools for voice generation, music creation, and audio editing. Explore ElevenLabs, Suno, and more.',
+      keywords: ['ai voice generator', 'ai music', 'text to speech', 'elevenlabs', 'ai audio'],
+    },
+  },
+  {
+    id: '7',
+    name: 'Productivity & Automation',
+    slug: 'productivity',
+    description: 'AI-powered productivity tools, automation platforms, and workflow optimizers for teams and individuals.',
+    icon: 'Zap',
+    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop',
+    color: 'bg-orange-500',
+    toolCount: 10,
+    popular: true,
+    seo: {
+      metaTitle: 'Best AI Productivity & Automation Tools (2025)',
+      metaDescription: 'Boost productivity with AI tools for task management, scheduling, and automation. Compare Notion AI, Zapier, and more.',
+      keywords: ['ai productivity', 'automation tools', 'task management ai', 'workflow automation', 'notion ai'],
+    },
+  },
+  {
+    id: '8',
+    name: 'Research & Analysis',
+    slug: 'research-analysis',
+    description: 'AI research assistants, document analysis tools, and knowledge discovery platforms for academics and professionals.',
+    icon: 'Search',
+    image: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&h=600&fit=crop',
+    color: 'bg-cyan-500',
+    toolCount: 10,
+    popular: true,
+    seo: {
+      metaTitle: 'Best AI Research & Analysis Tools (2025)',
+      metaDescription: 'Find AI tools for research, document analysis, and academic work. Explore Elicit, Consensus, and other research AI.',
+      keywords: ['ai research tool', 'research assistant', 'document analysis', 'academic ai', 'paper research'],
+    },
+  },
+  {
+    id: '9',
+    name: 'Design & UI/UX',
+    slug: 'design',
+    description: 'AI design tools, UI generators, and creative assistants for designers and non-designers alike.',
+    icon: 'Palette',
+    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop',
+    color: 'bg-indigo-500',
+    toolCount: 10,
+    popular: true,
+    seo: {
+      metaTitle: 'Best AI Design & UI/UX Tools (2025)',
+      metaDescription: 'Discover AI tools for design, UI generation, and creative work. Explore Figma AI, Canva AI, and more.',
+      keywords: ['ai design tool', 'ui design ai', 'figma ai', 'canva ai', 'ai graphics'],
+    },
+  },
+  {
+    id: '10',
+    name: 'Marketing & SEO',
+    slug: 'marketing-seo',
+    description: 'AI marketing tools, SEO optimizers, and content strategy platforms for digital marketers.',
+    icon: 'TrendingUp',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+    color: 'bg-teal-500',
+    toolCount: 10,
+    popular: true,
+    seo: {
+      metaTitle: 'Best AI Marketing & SEO Tools (2025)',
+      metaDescription: 'Optimize your marketing with AI. Explore Surfer SEO, Jasper, and other AI tools for content marketing and SEO.',
+      keywords: ['ai marketing', 'seo tools', 'content marketing ai', 'surfer seo', 'ai copywriting'],
+    },
+  },
+];
+
+export function getCategoryBySlug(slug: string): Category | undefined {
+  return categories.find(cat => cat.slug === slug);
+}
+
+export function getPopularCategories(): Category[] {
+  return categories.filter(cat => cat.popular);
+}
+
+export function getAllCategories(): Category[] {
+  return categories;
+}
