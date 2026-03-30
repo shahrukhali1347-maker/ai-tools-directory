@@ -2,9 +2,10 @@ import { SITE_CONFIG } from '@/config/site';
 import { AITool, Guide, FAQ, Collection, Category } from '@/types';
 
 export function generateToolSchema(tool: AITool) {
-  return {
+  const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
+    '@id': `${SITE_CONFIG.url}/tools/${tool.slug}/#software`,
     name: tool.name,
     description: tool.description,
     url: `${SITE_CONFIG.url}/tools/${tool.slug}`,
@@ -12,6 +13,7 @@ export function generateToolSchema(tool: AITool) {
     screenshot: tool.screenshots,
     applicationCategory: 'BusinessApplication',
     operatingSystem: tool.features.platforms.join(', '),
+    isAccessibleForFree: tool.pricing.free,
 
     offers: tool.pricing.plans.map(plan => ({
       '@type': 'Offer',
@@ -23,40 +25,28 @@ export function generateToolSchema(tool: AITool) {
       url: tool.website,
     })),
 
-    aggregateRating: tool.rating.count > 0 ? {
+    featureList: tool.features.core.join(', '),
+    datePublished: tool.dateAdded,
+    dateModified: tool.dateUpdated,
+
+    publisher: { '@id': `${SITE_CONFIG.url}/#organization` },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${SITE_CONFIG.url}/tools/${tool.slug}/#webpage`,
+    },
+  };
+
+  if (tool.rating.count > 0) {
+    schema.aggregateRating = {
       '@type': 'AggregateRating',
       ratingValue: tool.rating.average,
       ratingCount: tool.rating.count,
       bestRating: 5,
       worstRating: 1,
-    } : undefined,
+    };
+  }
 
-    review: tool.reviews.slice(0, 5).map(review => ({
-      '@type': 'Review',
-      author: {
-        '@type': 'Person',
-        name: review.author.name,
-      },
-      datePublished: review.date,
-      reviewBody: review.content,
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: review.rating,
-        bestRating: 5,
-        worstRating: 1,
-      },
-    })),
-
-    featureList: tool.features.core.join(', '),
-    datePublished: tool.dateAdded,
-    dateModified: tool.dateUpdated,
-
-    author: {
-      '@type': 'Organization',
-      name: SITE_CONFIG.name,
-      url: SITE_CONFIG.url,
-    },
-  };
+  return schema;
 }
 
 export function generateVideoSchema(tool: AITool) {
@@ -166,12 +156,19 @@ export function generateBreadcrumbSchema(items: { label: string; href: string }[
         name: 'Home',
         item: SITE_CONFIG.url,
       },
-      ...items.map((item, index) => ({
-        '@type': 'ListItem',
-        position: index + 2,
-        name: item.label,
-        item: `${SITE_CONFIG.url}${item.href}`,
-      })),
+      ...items.map((item, index) => {
+        const isLast = index === items.length - 1;
+        const listItem: Record<string, unknown> = {
+          '@type': 'ListItem',
+          position: index + 2,
+          name: item.label,
+        };
+        // Last breadcrumb item should NOT have "item" property (it's the current page)
+        if (!isLast) {
+          listItem.item = `${SITE_CONFIG.url}${item.href}`;
+        }
+        return listItem;
+      }),
     ],
   };
 }
@@ -180,9 +177,11 @@ export function generateWebsiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${SITE_CONFIG.url}/#website`,
     name: SITE_CONFIG.name,
     description: SITE_CONFIG.description,
     url: SITE_CONFIG.url,
+    publisher: { '@id': `${SITE_CONFIG.url}/#organization` },
     potentialAction: {
       '@type': 'SearchAction',
       target: {
@@ -198,15 +197,52 @@ export function generateOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${SITE_CONFIG.url}/#organization`,
     name: SITE_CONFIG.name,
     description: SITE_CONFIG.description,
     url: SITE_CONFIG.url,
-    logo: `${SITE_CONFIG.url}/logo.png`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE_CONFIG.url}/logo.png`,
+      width: 200,
+      height: 60,
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: 'hello@aitoolshub.com',
+      url: `${SITE_CONFIG.url}/contact`,
+      availableLanguage: 'English',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'San Francisco',
+      addressRegion: 'CA',
+      addressCountry: 'US',
+    },
     sameAs: [
       SITE_CONFIG.social.twitter,
       SITE_CONFIG.social.linkedin,
       SITE_CONFIG.social.youtube,
     ].filter(Boolean),
+  };
+}
+
+export function generateWebPageSchema(page: {
+  name: string;
+  description: string;
+  url: string;
+  dateModified?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE_CONFIG.url}${page.url}/#webpage`,
+    url: `${SITE_CONFIG.url}${page.url}`,
+    name: page.name,
+    description: page.description,
+    isPartOf: { '@id': `${SITE_CONFIG.url}/#website` },
+    ...(page.dateModified && { dateModified: page.dateModified }),
   };
 }
 
@@ -218,6 +254,7 @@ export function generateToolsListSchema(tools: AITool[]) {
     name: 'AI Tools Directory - Browse All Tools',
     description: `Discover and compare ${tools.length}+ AI tools across categories like chatbots, image generation, coding assistants, and more.`,
     url: `${SITE_CONFIG.url}/tools`,
+    isPartOf: { '@id': `${SITE_CONFIG.url}/#website` },
     mainEntity: {
       '@type': 'ItemList',
       numberOfItems: tools.length,
@@ -231,11 +268,6 @@ export function generateToolsListSchema(tools: AITool[]) {
           url: `${SITE_CONFIG.url}/tools/${tool.slug}`,
           image: tool.logo,
           applicationCategory: 'BusinessApplication',
-          aggregateRating: tool.rating.count > 0 ? {
-            '@type': 'AggregateRating',
-            ratingValue: tool.rating.average,
-            ratingCount: tool.rating.count,
-          } : undefined,
         },
       })),
     },
@@ -262,14 +294,7 @@ export function generateBlogPostSchema(post: {
       '@type': 'Person',
       name: post.author,
     },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE_CONFIG.name,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${SITE_CONFIG.url}/logo.png`,
-      },
-    },
+    publisher: { '@id': `${SITE_CONFIG.url}/#organization` },
     datePublished: post.date,
     dateModified: post.date,
     url: `${SITE_CONFIG.url}/blog/${post.slug}`,
@@ -294,6 +319,7 @@ export function generateBlogListSchema(posts: Array<{
     name: `${SITE_CONFIG.name} Blog`,
     description: 'Latest news, reviews, and tutorials about AI tools.',
     url: `${SITE_CONFIG.url}/blog`,
+    publisher: { '@id': `${SITE_CONFIG.url}/#organization` },
     blogPost: posts.map(post => ({
       '@type': 'BlogPosting',
       headline: post.title,
@@ -317,6 +343,7 @@ export function generateCollectionsListSchema(collections: Array<{
     name: 'AI Tool Collections - Curated Lists',
     description: 'Handpicked collections of AI tools organized by use case, industry, and workflow.',
     url: `${SITE_CONFIG.url}/collections`,
+    isPartOf: { '@id': `${SITE_CONFIG.url}/#website` },
     mainEntity: {
       '@type': 'ItemList',
       numberOfItems: collections.length,
@@ -348,6 +375,7 @@ export function generateGuidesListSchema(guides: Array<{
     name: 'AI Guides & Tutorials',
     description: 'Comprehensive guides and tutorials to help you get the most out of AI tools.',
     url: `${SITE_CONFIG.url}/guides`,
+    isPartOf: { '@id': `${SITE_CONFIG.url}/#website` },
     mainEntity: {
       '@type': 'ItemList',
       numberOfItems: guides.length,
@@ -383,6 +411,7 @@ export function generateCategoriesListSchema(categories: Array<{
     name: 'AI Tool Categories',
     description: 'Explore AI tools organized by use case and industry.',
     url: `${SITE_CONFIG.url}/categories`,
+    isPartOf: { '@id': `${SITE_CONFIG.url}/#website` },
     mainEntity: {
       '@type': 'ItemList',
       numberOfItems: categories.length,
@@ -405,6 +434,7 @@ export function generateContactSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${SITE_CONFIG.url}/#organization`,
     name: SITE_CONFIG.name,
     url: SITE_CONFIG.url,
     email: 'hello@aitoolshub.com',

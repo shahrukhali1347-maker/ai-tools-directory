@@ -1,6 +1,16 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, Search } from 'lucide-react';
 import Button from '@/components/ui/Button';
+
+export const metadata: Metadata = {
+  title: 'Page Not Found | AI Tools Hub',
+  description: 'The page you are looking for could not be found. Browse our directory of 2100+ AI tools or return to the homepage.',
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 export default function NotFound() {
   return (

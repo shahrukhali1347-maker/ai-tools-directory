@@ -78,6 +78,7 @@ export default function SearchBar() {
                 setSuggestions([]);
               }}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+              aria-label="Clear search"
             >
               <X className="w-5 h-5" />
             </button>

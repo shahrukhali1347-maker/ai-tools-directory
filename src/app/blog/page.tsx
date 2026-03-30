@@ -3,16 +3,24 @@ import Link from 'next/link';
 import { Newspaper, Clock, ArrowRight, User, Calendar, TrendingUp } from 'lucide-react';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 import StructuredData from '@/components/seo/StructuredData';
-import { generateBlogListSchema } from '@/lib/schema';
+import { generateBlogListSchema, generateWebPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'AI Tools Blog - News, Reviews & Tutorials | AI Tools Hub',
+  title: 'AI Tools Blog - News, Reviews & Tutorials',
   description: 'Stay updated with the latest AI news, tool reviews, tutorials, and industry insights. Learn how to use AI tools effectively.',
   keywords: ['AI blog', 'AI news', 'AI tutorials', 'AI tool reviews', 'artificial intelligence'],
+  alternates: {
+    canonical: '/blog',
+  },
   openGraph: {
     title: 'AI Tools Blog - News, Reviews & Tutorials',
-    description: 'Stay updated with the latest AI news, tool reviews, and industry insights.',
+    description: 'Stay updated with the latest AI news, tool reviews, tutorials, and industry insights.',
+    url: '/blog',
     type: 'website',
+  },
+  twitter: {
+    title: 'AI Tools Blog - News, Reviews & Tutorials',
+    description: 'Stay updated with the latest AI news, tool reviews, tutorials, and industry insights.',
   },
 };
 
@@ -106,7 +114,12 @@ function formatDate(dateStr: string) {
 export default function BlogPage() {
   return (
     <>
-      {/* Blog schema for rich results */}
+      {/* WebPage + Blog schema for rich results */}
+      <StructuredData data={generateWebPageSchema({
+        name: 'AI Tools Blog - News, Reviews & Tutorials',
+        description: 'Stay updated with the latest AI news, tool reviews, tutorials, and industry insights. Learn how to use AI tools effectively.',
+        url: '/blog',
+      })} />
       <StructuredData data={generateBlogListSchema(posts.map(p => ({
         title: p.title,
         excerpt: p.excerpt,
@@ -118,7 +131,7 @@ export default function BlogPage() {
         {/* Hero Section */}
         <div className="bg-gradient-to-br from-rose-900 via-pink-900 to-purple-900 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Breadcrumbs items={[{ label: 'Blog', href: '/blog' }]} />
+            <Breadcrumbs items={[{ label: 'Blog', href: '/blog' }]} variant="light" />
 
             <div className="mt-8 text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white/80 text-sm mb-6">
@@ -152,8 +165,12 @@ export default function BlogPage() {
                   <div className="relative h-56 overflow-hidden">
                     <img
                       src={post.image}
-                      alt={post.title}
+                      alt={`${post.title} - AI Tools Hub blog article`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      decoding="async"
+                      width={600}
+                      height={400}
                     />
                     <div className="absolute top-4 left-4">
                       <span className="px-3 py-1 bg-purple-600 text-white text-xs font-semibold rounded-full">
@@ -214,8 +231,12 @@ export default function BlogPage() {
                   <div className="relative h-40 overflow-hidden">
                     <img
                       src={post.image}
-                      alt={post.title}
+                      alt={`${post.title} - AI Tools Hub blog article`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      decoding="async"
+                      width={600}
+                      height={400}
                     />
                   </div>
 

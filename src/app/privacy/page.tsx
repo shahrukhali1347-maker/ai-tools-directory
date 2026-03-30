@@ -1,19 +1,40 @@
 import { Metadata } from 'next';
 import { Shield, Calendar } from 'lucide-react';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
+import StructuredData from '@/components/seo/StructuredData';
+import { generateWebPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - AI Tools Hub',
-  description: 'Learn how AI Tools Hub collects, uses, and protects your personal information.',
+  title: 'Privacy Policy | AI Tools Hub',
+  description: 'Learn how AI Tools Hub collects, uses, and protects your personal information. Read our data privacy practices and your rights.',
+  alternates: {
+    canonical: '/privacy',
+  },
+  openGraph: {
+    title: 'Privacy Policy | AI Tools Hub',
+    description: 'Learn how AI Tools Hub collects, uses, and protects your personal information. Read our data privacy practices and your rights.',
+    url: '/privacy',
+    type: 'website',
+  },
+  twitter: {
+    title: 'Privacy Policy | AI Tools Hub',
+    description: 'Learn how AI Tools Hub collects, uses, and protects your personal information. Read our data privacy practices and your rights.',
+  },
 };
 
 export default function PrivacyPage() {
   return (
+    <>
+    <StructuredData data={generateWebPageSchema({
+      name: 'Privacy Policy | AI Tools Hub',
+      description: 'Learn how AI Tools Hub collects, uses, and protects your personal information.',
+      url: '/privacy',
+    })} />
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-gray-900 via-slate-900 to-zinc-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs items={[{ label: 'Privacy Policy', href: '/privacy' }]} />
+          <Breadcrumbs items={[{ label: 'Privacy Policy', href: '/privacy' }]} variant="light" />
 
           <div className="mt-8 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white/80 text-sm mb-6">
@@ -122,5 +143,6 @@ export default function PrivacyPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

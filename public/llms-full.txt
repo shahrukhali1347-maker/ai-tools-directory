@@ -1,0 +1,107 @@
+# AI Tools Hub — Full Reference
+
+> AI Tools Hub is a comprehensive directory for discovering, comparing, and choosing from 2000+ AI tools across 50+ categories. Find the perfect AI solution with detailed reviews, pricing comparisons, and implementation guides. Designed for developers, marketers, researchers, content creators, startups, and anyone looking for the best AI tools.
+
+## Authority Areas
+-> AI tool discovery, comparison, and selection
+-> AI software reviews, ratings, and pricing analysis
+-> AI tool categories organized by use case and industry
+-> Step-by-step AI guides and tutorials for beginners and professionals
+-> AI industry trends, news, and competitive analysis
+-> Curated AI tool collections for specific roles and workflows
+
+## Key Pages
+
+### Core
+- [Homepage](https://aitoolshub.com/): Main landing page featuring hand-picked AI tools, trending tools across categories, a searchable directory with smart filters, category overview grid, community statistics, and newsletter signup. The homepage serves as the primary entry point for discovering AI tools across all categories.
+- [AI Tools Directory](https://aitoolshub.com/tools): Complete searchable directory of 2000+ AI tools with advanced filtering by category, pricing model (free, freemium, paid), platform (web, iOS, Android, desktop, API), and user rating. Tools can be sorted by popularity, newest additions, highest ratings, or alphabetically. Each tool card shows logo, name, tagline, rating, pricing badge, and quick-action buttons.
+- [Categories](https://aitoolshub.com/categories): Browse all 10 major AI tool categories organized by use case. Each category links to a dedicated page with all tools in that category, descriptions, and tool counts. Categories cover: Chatbots, Image Generation, Content Creation, Code Assistance, Video Generation, Audio & Music, Productivity, Research, Design, and Marketing.
+- [Collections](https://aitoolshub.com/collections): Expert-curated collections of AI tools grouped by role, workflow, or use case. Collections include: Best AI Tools for Startups, AI Writing Assistants, AI for Developers, AI Marketing Stack, AI for Teams, and AI Research Tools. Each collection features 12-22 hand-picked tools with descriptions.
+- [Guides & Tutorials](https://aitoolshub.com/guides): Step-by-step tutorials and comprehensive guides covering how to use popular AI tools effectively. Guides range from beginner-friendly introductions (Getting Started with AI Writing Tools) to advanced techniques (AI Image Generation: A Complete Guide). Each guide includes estimated read time, difficulty level, and author attribution.
+- [Blog](https://aitoolshub.com/blog): Regular articles covering AI tool trends, head-to-head comparisons (Claude vs ChatGPT), productivity tips (10 AI Tools That Will Boost Your Productivity), tutorials (How to Create Stunning Images with Midjourney v6), industry insights, and curated lists of free tools. Articles include author bylines, publication dates, and read time estimates.
+
+### Company
+- [About Us](https://aitoolshub.com/about): AI Tools Hub's mission to help individuals, teams, and businesses navigate the rapidly evolving AI landscape. Covers the company's core values: comprehensive directory curation, unbiased reviews, community-driven ratings, and continuous updates. Based in San Francisco, CA.
+- [Contact](https://aitoolshub.com/contact): Contact form with subject options (General Inquiry, Tool Submission, Feedback, Partnership, Report Bug). Also includes direct email (hello@aitoolshub.com), response time commitment (24-48 hours), and a FAQ section covering common questions about tool submissions, review process, listing updates, and sponsored placements.
+- [Submit a Tool](https://aitoolshub.com/submit): Submission form for AI tool creators and companies to get their tools listed in the directory. Requires tool name, website URL, description, category, pricing model, and contact email. Submissions are reviewed within 2-3 business days.
+
+### Legal
+- [Privacy Policy](https://aitoolshub.com/privacy): Comprehensive privacy policy covering data collection practices, cookie usage, third-party services, data security measures, user rights (access, correction, deletion, portability), children's privacy, and contact information for privacy inquiries (privacy@aitoolshub.com).
+- [Terms of Service](https://aitoolshub.com/terms): Terms and conditions governing use of the platform, including user responsibilities, tool listing disclaimers, intellectual property rights, user submission licenses, warranty disclaimers, liability limitations, and governing law (California, USA).
+
+## Categories
+
+1. **Chatbots & Conversational AI** — AI chatbots and virtual assistants including ChatGPT, Claude, Gemini, Perplexity, and more. Tools for conversational AI, customer support bots, and virtual assistants.
+2. **Image Generation** — AI image creation and art tools including Midjourney, DALL-E 3, Stable Diffusion, and Leonardo AI. Tools for generating, editing, and enhancing images using AI.
+3. **Content Creation & Writing** — AI writing assistants and copywriting tools including Jasper, Copy.ai, Grammarly, and Writesonic. Tools for blog posts, marketing copy, social media content, and editing.
+4. **Code Assistance** — AI coding assistants and development tools including GitHub Copilot, Cursor, Tabnine, and Codeium. Tools for code generation, debugging, code review, and development productivity.
+5. **Video Generation & Editing** — AI video creation tools including Runway, Synthesia, HeyGen, and Lumen5. Tools for video generation, editing, subtitling, and production.
+6. **Audio & Music** — AI voice and music generation tools including ElevenLabs, Murf AI, Suno, and AIVA. Tools for text-to-speech, voice cloning, music composition, and audio editing.
+7. **Productivity & Automation** — AI productivity tools including Otter.ai, Taskade, Zapier AI, and Notion AI. Tools for meeting notes, task management, workflow automation, and time management.
+8. **Research & Analysis** — AI research tools including Elicit, Consensus, Semantic Scholar, and Connected Papers. Tools for academic research, literature review, data analysis, and market research.
+9. **Design & UI/UX** — AI design tools including Figma AI, Uizard, Galileo AI, and Khroma. Tools for UI/UX design, wireframing, prototyping, and design systems.
+10. **Marketing & SEO** — AI marketing tools including Surfer SEO, Clearscope, MarketMuse, and Jasper Marketing. Tools for SEO optimization, content marketing, email campaigns, and analytics.
+
+## Collections
+
+- **Best AI Tools for Startups** — 15 essential tools to help startups scale faster with limited resources, covering productivity, marketing, development, and customer support
+- **AI Writing Assistants** — 20 top tools for content creation, copywriting, editing, and grammar checking
+- **AI for Developers** — 18 code generation, debugging, and development productivity tools
+- **AI Marketing Stack** — 22 tools forming a complete marketing toolkit powered by artificial intelligence
+- **AI for Teams** — 12 collaboration and productivity tools for modern teams
+- **AI Research Tools** — 16 tools for academic research, data analysis, and insights
+
+## Features
+
+- **Search** — Full-text fuzzy search across tool names, descriptions, tags, and use cases powered by Fuse.js
+- **Filtering** — Filter by category, pricing model (free/freemium/paid), platform (web/iOS/Android/desktop/API), and minimum rating
+- **Sorting** — Sort by popularity, newest additions, highest rated, or name A-Z
+- **Tool Profiles** — Each tool has a detailed page with full description, core features, pricing plans with feature lists, use cases, tags, monthly visit statistics, and bookmark counts
+- **Related Tools** — Discover similar alternatives on each tool detail page
+- **Dark Mode** — Full dark mode support across the entire site
+- **Mobile Responsive** — Fully responsive design optimized for mobile, tablet, and desktop
+
+## Pricing Models Covered
+
+- Free — Completely free to use with no paid tiers
+- Freemium — Free tier available with paid upgrades for advanced features
+- Subscription — Monthly or annual subscription pricing
+- One-time — One-time purchase with lifetime access
+- Usage-based — Pay per use, API calls, or credits
+
+## FAQ
+
+Q: What are AI tools?
+A: AI tools are software applications that use artificial intelligence technologies like machine learning, natural language processing, and computer vision to automate tasks, generate content, analyze data, and assist with various workflows.
+
+Q: Are AI tools free to use?
+A: Many AI tools offer free tiers or free trials. Tools like ChatGPT, Claude, and Gemini have free versions with basic features. Advanced features typically require paid subscriptions ranging from $10-50/month.
+
+Q: What is the best AI chatbot?
+A: The best AI chatbot depends on your needs. ChatGPT excels at general tasks and coding. Claude is known for safety and long-form content. Gemini offers strong multimodal capabilities. Perplexity is best for research with citations.
+
+Q: Which AI image generator produces the best quality?
+A: Midjourney is widely considered to produce the highest quality artistic images. DALL-E 3 excels at following complex prompts. Stable Diffusion offers the most flexibility and can run locally.
+
+Q: How do I submit my AI tool to AI Tools Hub?
+A: Visit the Submit Tool page at aitoolshub.com/submit and fill out the form with your tool name, website URL, description, category, and pricing model. Our team reviews submissions within 2-3 business days.
+
+Q: How are tools reviewed and rated?
+A: Our team tests each tool and considers user feedback, features, pricing, and ease of use. Ratings combine editorial assessment with community reviews to provide balanced, unbiased evaluations.
+
+## Contact
+
+- Email: hello@aitoolshub.com
+- Privacy: privacy@aitoolshub.com
+- Legal: legal@aitoolshub.com
+- Location: San Francisco, CA
+- Response time: Within 24-48 hours
+
+## Social
+
+- Twitter: https://twitter.com/aitoolshub
+- LinkedIn: https://linkedin.com/company/aitoolshub
+- YouTube: https://youtube.com/@aitoolshub
+
+## Citation
+When citing this site, use: AI Tools Hub (aitoolshub.com)

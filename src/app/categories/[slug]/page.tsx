@@ -5,8 +5,8 @@ import { getToolsByCategory } from '@/data/tools';
 import ToolGrid from '@/components/tools/ToolGrid';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 import StructuredData from '@/components/seo/StructuredData';
-import { generateCategorySchema } from '@/lib/schema';
-import { MessageSquare, Image as ImageIcon, FileText, Code, Video, Music, Zap, Search, Palette, TrendingUp } from 'lucide-react';
+import { generateCategorySchema, generateWebPageSchema } from '@/lib/schema';
+import { MessageSquare, Image as ImageIcon, FileText, Code, Video, Music, Zap, Search, Palette, TrendingUp, BarChart3, Headphones, GraduationCap, DollarSign, Heart } from 'lucide-react';
 
 const iconMap: Record<string, React.ReactNode> = {
   MessageSquare: <MessageSquare className="w-10 h-10" />,
@@ -19,6 +19,11 @@ const iconMap: Record<string, React.ReactNode> = {
   Search: <Search className="w-10 h-10" />,
   Palette: <Palette className="w-10 h-10" />,
   TrendingUp: <TrendingUp className="w-10 h-10" />,
+  BarChart3: <BarChart3 className="w-10 h-10" />,
+  Headphones: <Headphones className="w-10 h-10" />,
+  GraduationCap: <GraduationCap className="w-10 h-10" />,
+  DollarSign: <DollarSign className="w-10 h-10" />,
+  Heart: <Heart className="w-10 h-10" />,
 };
 
 interface CategoryPageProps {
@@ -41,13 +46,26 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
     };
   }
 
+  const title = category.seo.metaTitle || `${category.name} - AI Tools`;
+  const description = category.seo.metaDescription || category.description;
+
   return {
-    title: category.seo.metaTitle || `${category.name} - AI Tools`,
-    description: category.seo.metaDescription || category.description,
+    title,
+    description,
     keywords: category.seo.keywords,
+    alternates: {
+      canonical: `/categories/${category.slug}`,
+    },
     openGraph: {
-      title: category.seo.metaTitle || `${category.name} - AI Tools`,
-      description: category.seo.metaDescription || category.description,
+      title,
+      description,
+      url: `/categories/${category.slug}`,
+      images: [category.image],
+      type: 'website',
+    },
+    twitter: {
+      title,
+      description,
       images: [category.image],
     },
   };
@@ -65,6 +83,11 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   return (
     <>
+      <StructuredData data={generateWebPageSchema({
+        name: category.seo.metaTitle || `${category.name} - AI Tools`,
+        description: category.seo.metaDescription || category.description,
+        url: `/categories/${category.slug}`,
+      })} />
       <StructuredData data={generateCategorySchema(category, tools)} />
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -80,6 +103,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 { label: 'Categories', href: '/categories' },
                 { label: category.name, href: `/categories/${category.slug}` },
               ]}
+              variant="light"
             />
 
             <div className="flex items-center gap-4 mt-4">

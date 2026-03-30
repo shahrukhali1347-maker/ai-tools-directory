@@ -11,7 +11,7 @@ import Badge from '@/components/ui/Badge';
 import Button from '@/components/ui/Button';
 import Rating from '@/components/ui/Rating';
 import ToolCard from '@/components/tools/ToolCard';
-import { generateToolSchema } from '@/lib/schema';
+import { generateToolSchema, generateWebPageSchema } from '@/lib/schema';
 import { formatDate, formatNumber, getPricingLabel } from '@/lib/utils';
 import { SITE_CONFIG } from '@/config/site';
 
@@ -35,21 +35,28 @@ export async function generateMetadata({ params }: ToolPageProps): Promise<Metad
     };
   }
 
+  const title = tool.seo.metaTitle || `${tool.name} - ${tool.tagline}`;
+  const description = tool.seo.metaDescription || tool.description;
+
   return {
-    title: tool.seo.metaTitle || `${tool.name} - ${tool.tagline}`,
-    description: tool.seo.metaDescription || tool.description,
+    title,
+    description,
     keywords: tool.seo.keywords,
+    alternates: {
+      canonical: `/tools/${tool.slug}`,
+    },
     openGraph: {
-      title: tool.seo.metaTitle || `${tool.name} - ${tool.tagline}`,
-      description: tool.seo.metaDescription || tool.description,
+      title,
+      description,
+      url: `/tools/${tool.slug}`,
       images: [tool.seo.ogImage || tool.logo],
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: tool.name,
-      description: tool.description,
-      images: [tool.logo],
+      title,
+      description,
+      images: [tool.seo.ogImage || tool.logo],
     },
   };
 }
@@ -68,6 +75,12 @@ export default async function ToolPage({ params }: ToolPageProps) {
 
   return (
     <>
+      <StructuredData data={generateWebPageSchema({
+        name: tool.seo.metaTitle || `${tool.name} - ${tool.tagline}`,
+        description: tool.seo.metaDescription || tool.description,
+        url: `/tools/${tool.slug}`,
+        dateModified: tool.dateUpdated,
+      })} />
       <StructuredData data={generateToolSchema(tool)} />
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -88,7 +101,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
                 <div className="flex flex-col sm:flex-row gap-6">
                   {/* Logo */}
                   <div className="w-24 h-24 relative rounded-xl overflow-hidden flex-shrink-0 bg-gray-100 dark:bg-gray-700">
-                    <Image src={tool.logo} alt={tool.name} fill className="object-cover" />
+                    <Image src={tool.logo} alt={`${tool.name} AI tool logo`} fill className="object-cover" sizes="96px" priority />
                   </div>
 
                   {/* Info */}

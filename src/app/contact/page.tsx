@@ -41,7 +41,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs items={[{ label: 'Contact', href: '/contact' }]} />
+          <Breadcrumbs items={[{ label: 'Contact', href: '/contact' }]} variant="light" />
 
           <div className="mt-8 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white/80 text-sm mb-6">

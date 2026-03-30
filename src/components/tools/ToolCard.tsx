@@ -32,10 +32,11 @@ export default function ToolCard({ tool }: ToolCardProps) {
             {!imgError ? (
               <img
                 src={tool.logo}
-                alt={tool.name}
+                alt={`${tool.name} AI tool logo`}
                 className="max-w-full max-h-full w-auto h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                 onError={() => setImgError(true)}
                 loading="lazy"
+                decoding="async"
               />
             ) : (
               /* Clean text fallback - no gradient */

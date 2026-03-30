@@ -1,0 +1,16 @@
+{
+  "name": "AI Tools Hub",
+  "short_name": "AI Tools",
+  "description": "Discover, compare, and choose from 2000+ AI tools across 50+ categories.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#7c3aed",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

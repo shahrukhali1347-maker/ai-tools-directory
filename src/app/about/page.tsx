@@ -2,12 +2,25 @@ import { Metadata } from 'next';
 import { Sparkles, Target, Users, Zap } from 'lucide-react';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 import StructuredData from '@/components/seo/StructuredData';
-import { generateOrganizationSchema } from '@/lib/schema';
+import { generateOrganizationSchema, generateWebPageSchema } from '@/lib/schema';
 import { SITE_CONFIG } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description: `Learn about ${SITE_CONFIG.name} - your trusted source for discovering and comparing AI tools.`,
+  title: 'About AI Tools Hub — Our Mission & Story',
+  description: `AI Tools Hub helps you discover, compare, and choose from 2100+ AI tools across 55+ categories. Learn about our mission and unbiased review process.`,
+  alternates: {
+    canonical: '/about',
+  },
+  openGraph: {
+    title: 'About AI Tools Hub — Our Mission & Story',
+    description: `AI Tools Hub helps individuals and teams discover, compare, and choose from 2000+ AI tools across 50+ categories with honest, unbiased reviews.`,
+    url: '/about',
+    type: 'website',
+  },
+  twitter: {
+    title: 'About AI Tools Hub — Our Mission & Story',
+    description: `AI Tools Hub helps individuals and teams discover, compare, and choose from 2000+ AI tools across 50+ categories with honest, unbiased reviews.`,
+  },
 };
 
 const features = [
@@ -36,8 +49,13 @@ const features = [
 export default function AboutPage() {
   return (
     <>
-      {/* Organization schema for rich results */}
+      {/* Organization + WebPage schema for rich results */}
       <StructuredData data={generateOrganizationSchema()} />
+      <StructuredData data={generateWebPageSchema({
+        name: 'About AI Tools Hub — Our Mission & Story',
+        description: 'AI Tools Hub helps individuals and teams discover, compare, and choose from 2000+ AI tools across 50+ categories.',
+        url: '/about',
+      })} />
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

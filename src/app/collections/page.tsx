@@ -3,11 +3,24 @@ import Link from 'next/link';
 import { Layers, ArrowRight, Sparkles, Zap, Brain, Rocket, Target, Users } from 'lucide-react';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 import StructuredData from '@/components/seo/StructuredData';
-import { generateCollectionsListSchema } from '@/lib/schema';
+import { generateCollectionsListSchema, generateWebPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'AI Tool Collections - Curated Lists',
-  description: 'Explore curated collections of AI tools for specific use cases, industries, and workflows.',
+  title: 'Curated AI Tool Collections | AI Tools Hub',
+  description: 'Explore curated collections of the best AI tools for startups, developers, writers, marketers, and researchers. Find tools organized by use case and workflow.',
+  alternates: {
+    canonical: '/collections',
+  },
+  openGraph: {
+    title: 'Curated AI Tool Collections | AI Tools Hub',
+    description: 'Explore curated collections of the best AI tools for startups, developers, writers, marketers, and researchers. Find tools organized by use case and workflow.',
+    url: '/collections',
+    type: 'website',
+  },
+  twitter: {
+    title: 'Curated AI Tool Collections | AI Tools Hub',
+    description: 'Explore curated collections of the best AI tools for startups, developers, writers, marketers, and researchers. Find tools organized by use case and workflow.',
+  },
 };
 
 const collections = [
@@ -70,7 +83,12 @@ const collections = [
 export default function CollectionsPage() {
   return (
     <>
-      {/* CollectionPage schema for rich results */}
+      {/* WebPage + CollectionPage schema for rich results */}
+      <StructuredData data={generateWebPageSchema({
+        name: 'Curated AI Tool Collections',
+        description: 'Handpicked collections of AI tools organized by use case, industry, and workflow.',
+        url: '/collections',
+      })} />
       <StructuredData data={generateCollectionsListSchema(collections.map(c => ({
         title: c.title,
         description: c.description,
@@ -82,7 +100,7 @@ export default function CollectionsPage() {
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs items={[{ label: 'Collections', href: '/collections' }]} />
+          <Breadcrumbs items={[{ label: 'Collections', href: '/collections' }]} variant="light" />
 
           <div className="mt-8 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white/80 text-sm mb-6">

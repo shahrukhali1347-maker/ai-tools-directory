@@ -3,11 +3,24 @@ import Link from 'next/link';
 import { BookOpen, Clock, ArrowRight, User, Calendar } from 'lucide-react';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 import StructuredData from '@/components/seo/StructuredData';
-import { generateGuidesListSchema } from '@/lib/schema';
+import { generateGuidesListSchema, generateWebPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'AI Guides & Tutorials - Learn About AI Tools',
-  description: 'Comprehensive guides and tutorials to help you get the most out of AI tools.',
+  title: 'AI Guides & Tutorials | AI Tools Hub',
+  description: 'Step-by-step AI guides and tutorials covering writing, image generation, coding, and more. Learn to use AI tools effectively and boost productivity.',
+  alternates: {
+    canonical: '/guides',
+  },
+  openGraph: {
+    title: 'AI Guides & Tutorials | AI Tools Hub',
+    description: 'Step-by-step AI guides and tutorials covering writing, image generation, coding, and more. Learn to use AI tools effectively and boost productivity.',
+    url: '/guides',
+    type: 'website',
+  },
+  twitter: {
+    title: 'AI Guides & Tutorials | AI Tools Hub',
+    description: 'Step-by-step AI guides and tutorials covering writing, image generation, coding, and more. Learn to use AI tools effectively and boost productivity.',
+  },
 };
 
 const guides = [
@@ -82,7 +95,12 @@ const guides = [
 export default function GuidesPage() {
   return (
     <>
-      {/* Guides listing schema for rich results */}
+      {/* WebPage + Guides listing schema for rich results */}
+      <StructuredData data={generateWebPageSchema({
+        name: 'AI Guides & Tutorials',
+        description: 'Comprehensive guides and tutorials to help you get the most out of AI tools.',
+        url: '/guides',
+      })} />
       <StructuredData data={generateGuidesListSchema(guides.map(g => ({
         title: g.title,
         excerpt: g.excerpt,
@@ -95,7 +113,7 @@ export default function GuidesPage() {
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs items={[{ label: 'Guides', href: '/guides' }]} />
+          <Breadcrumbs items={[{ label: 'Guides', href: '/guides' }]} variant="light" />
 
           <div className="mt-8 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white/80 text-sm mb-6">
@@ -123,8 +141,12 @@ export default function GuidesPage() {
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={guide.image}
-                  alt={guide.title}
+                  alt={`${guide.title} - AI tutorial guide`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                  width={600}
+                  height={400}
                 />
                 <div className="absolute top-3 left-3">
                   <span className="px-3 py-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full text-xs font-semibold text-gray-900 dark:text-white">

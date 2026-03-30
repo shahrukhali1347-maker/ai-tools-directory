@@ -14,10 +14,10 @@ export const SITE_CONFIG: SiteConfig = {
     googleAnalyticsId: "G-XXXXXXXXXX",
   },
   stats: {
-    toolsCount: 2000,
-    categoriesCount: 50,
-    reviewsCount: 15000,
-    usersCount: 100000,
+    toolsCount: 2100,
+    categoriesCount: 55,
+    reviewsCount: 18000,
+    usersCount: 125000,
   },
 };
 

@@ -1,19 +1,40 @@
 import { Metadata } from 'next';
 import { FileText, Calendar } from 'lucide-react';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
+import StructuredData from '@/components/seo/StructuredData';
+import { generateWebPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service - AI Tools Hub',
-  description: 'Read the terms and conditions for using AI Tools Hub.',
+  title: 'Terms of Service | AI Tools Hub',
+  description: 'Read the terms and conditions for using AI Tools Hub. Understand your rights and responsibilities when accessing our AI tools directory.',
+  alternates: {
+    canonical: '/terms',
+  },
+  openGraph: {
+    title: 'Terms of Service | AI Tools Hub',
+    description: 'Read the terms and conditions for using AI Tools Hub. Understand your rights and responsibilities when accessing our AI tools directory.',
+    url: '/terms',
+    type: 'website',
+  },
+  twitter: {
+    title: 'Terms of Service | AI Tools Hub',
+    description: 'Read the terms and conditions for using AI Tools Hub. Understand your rights and responsibilities when accessing our AI tools directory.',
+  },
 };
 
 export default function TermsPage() {
   return (
+    <>
+    <StructuredData data={generateWebPageSchema({
+      name: 'Terms of Service | AI Tools Hub',
+      description: 'Read the terms and conditions for using AI Tools Hub and our AI tools directory.',
+      url: '/terms',
+    })} />
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-gray-900 via-slate-900 to-zinc-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs items={[{ label: 'Terms of Service', href: '/terms' }]} />
+          <Breadcrumbs items={[{ label: 'Terms of Service', href: '/terms' }]} variant="light" />
 
           <div className="mt-8 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white/80 text-sm mb-6">
@@ -149,5 +170,6 @@ export default function TermsPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

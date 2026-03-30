@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { MessageSquare, Image as ImageIcon, FileText, Code, Video, Music, Zap, Search, Palette, TrendingUp } from 'lucide-react';
+import { MessageSquare, Image as ImageIcon, FileText, Code, Video, Music, Zap, Search, Palette, TrendingUp, BarChart3, Headphones, GraduationCap, DollarSign, Heart } from 'lucide-react';
 import { Category } from '@/types';
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -13,6 +13,11 @@ const iconMap: Record<string, React.ReactNode> = {
   Search: <Search className="w-8 h-8" />,
   Palette: <Palette className="w-8 h-8" />,
   TrendingUp: <TrendingUp className="w-8 h-8" />,
+  BarChart3: <BarChart3 className="w-8 h-8" />,
+  Headphones: <Headphones className="w-8 h-8" />,
+  GraduationCap: <GraduationCap className="w-8 h-8" />,
+  DollarSign: <DollarSign className="w-8 h-8" />,
+  Heart: <Heart className="w-8 h-8" />,
 };
 
 interface CategoryCardProps {

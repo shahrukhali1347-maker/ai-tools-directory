@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, Bot, Wand2, PenTool, Terminal, Film, Mic2, Sparkles, BookOpen, Layers, BarChart3 } from 'lucide-react';
+import { ArrowRight, Bot, Wand2, PenTool, Terminal, Film, Mic2, Sparkles, BookOpen, Layers, BarChart3, Headphones, GraduationCap, DollarSign, Heart } from 'lucide-react';
 import { categories } from '@/data/categories';
 
 const iconMap: Record<string, React.ElementType> = {
@@ -15,6 +15,11 @@ const iconMap: Record<string, React.ElementType> = {
   Search: BookOpen,
   Palette: Layers,
   TrendingUp: BarChart3,
+  BarChart3: BarChart3,
+  Headphones: Headphones,
+  GraduationCap: GraduationCap,
+  DollarSign: DollarSign,
+  Heart: Heart,
 };
 
 const gradientMap: Record<string, string> = {
@@ -28,6 +33,11 @@ const gradientMap: Record<string, string> = {
   'bg-cyan-500': 'from-teal-400 to-cyan-600',
   'bg-indigo-500': 'from-indigo-400 to-purple-600',
   'bg-teal-500': 'from-emerald-400 to-teal-600',
+  'bg-emerald-500': 'from-emerald-400 to-green-600',
+  'bg-sky-500': 'from-sky-400 to-blue-600',
+  'bg-amber-500': 'from-amber-400 to-yellow-600',
+  'bg-lime-500': 'from-lime-400 to-green-600',
+  'bg-rose-500': 'from-rose-400 to-pink-600',
 };
 
 const subtitleMap: Record<string, string> = {
@@ -51,7 +61,7 @@ export default function CategoriesGrid() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-semibold mb-5">
             <Sparkles className="w-4 h-4" />
-            <span>Explore 10 Categories</span>
+            <span>Explore 15 Categories</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-5">
             Browse by{' '}
