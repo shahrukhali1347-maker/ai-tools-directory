@@ -34,6 +34,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  // openGraph.images and twitter.images come from src/app/opengraph-image.tsx + twitter-image.tsx convention files
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -41,14 +42,6 @@ export const metadata: Metadata = {
     siteName: SITE_CONFIG.name,
     title: `${SITE_CONFIG.name} - Discover the Best AI Tools`,
     description: defaultDescription,
-    images: [
-      {
-        url: SITE_CONFIG.ogImage,
-        width: 1200,
-        height: 630,
-        alt: `${SITE_CONFIG.name} - AI tools discovery platform`,
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -56,10 +49,6 @@ export const metadata: Metadata = {
     creator: '@aitoolshub',
     title: `${SITE_CONFIG.name} - Discover the Best AI Tools`,
     description: defaultDescription,
-    images: {
-      url: SITE_CONFIG.ogImage,
-      alt: `${SITE_CONFIG.name} - AI tools discovery platform`,
-    },
   },
   robots: {
     index: true,

@@ -49,14 +49,14 @@ export async function generateMetadata({ params }: ToolPageProps): Promise<Metad
       title,
       description,
       url: `/tools/${tool.slug}`,
-      images: [tool.seo.ogImage || tool.logo],
       type: 'website',
+      // Images inherited from src/app/opengraph-image.tsx convention file (1200x630 branded)
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [tool.seo.ogImage || tool.logo],
+      // Images inherited from src/app/twitter-image.tsx convention file
     },
   };
 }
