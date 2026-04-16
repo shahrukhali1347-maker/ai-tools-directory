@@ -9,15 +9,34 @@ export default function NewsletterCTA() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  const [error, setError] = useState('');
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
     setIsLoading(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setIsSubmitted(true);
-    setIsLoading(false);
+    setError('');
+
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Subscription failed');
+      }
+
+      setIsSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -110,6 +129,9 @@ export default function NewsletterCTA() {
                   </Button>
                 </div>
               </div>
+              {error && (
+                <p className="text-sm text-red-400 mt-3">{error}</p>
+              )}
               <p className="text-sm text-white/50 mt-4 flex items-center justify-center gap-2">
                 <Check className="w-4 h-4 text-green-400" />
                 No spam, ever. Unsubscribe anytime.

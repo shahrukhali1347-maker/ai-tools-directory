@@ -118,35 +118,34 @@ export default function SubmitPage() {
 
     setIsLoading(true);
 
-    const subject = `New AI Tool Submission: ${formData.name}`;
-    const bodyLines = [
-      `Tool Name: ${formData.name}`,
-      `Website: ${formData.website}`,
-      `Tagline: ${formData.tagline}`,
-      `Category: ${formData.category}`,
-      `Pricing: ${formData.pricing}`,
-      `Submitter Email: ${formData.email}`,
-      '',
-      'Full Description:',
-      formData.description,
-    ];
-    if (logoFile) {
-      bodyLines.push(
-        '',
-        `⚠ LOGO ATTACHED: Please attach "${logoFile.name}" (${(logoFile.size / 1024).toFixed(0)}KB) to this email before sending.`
-      );
-    }
-    bodyLines.push('', '---', 'Submitted via bestaitools4u.com/submit');
-    const body = bodyLines.join('\n');
+    try {
+      const response = await fetch('/api/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          website: formData.website.trim(),
+          tagline: formData.tagline.trim(),
+          description: formData.description.trim(),
+          category: formData.category,
+          pricing: formData.pricing,
+          email: formData.email.trim(),
+          logoFilename: logoFile?.name || null,
+        }),
+      });
 
-    const mailtoLink = `mailto:${SUBMISSION_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
+      const data = await response.json();
 
-    // Give the mailto a moment to trigger, then show the success state
-    setTimeout(() => {
+      if (!response.ok) {
+        throw new Error(data.error || 'Submission failed');
+      }
+
       setIsSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+    } finally {
       setIsLoading(false);
-    }, 800);
+    }
   };
 
   const resetForm = () => {

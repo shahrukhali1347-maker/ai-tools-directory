@@ -27,13 +27,39 @@ const faqs = [
 export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    if (error) setError('');
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsSubmitted(true);
-    setIsLoading(false);
+    setError('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      setIsSubmitted(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -83,25 +109,38 @@ export default function ContactPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 space-y-5">
+                {error && (
+                  <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-sm text-red-700 dark:text-red-400">
+                    {error}
+                  </div>
+                )}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-sm font-medium text-gray-900 dark:text-white mb-2 block">
+                    <label htmlFor="name" className="text-sm font-medium text-gray-900 dark:text-white mb-2 block">
                       Name *
                     </label>
                     <input
+                      id="name"
+                      name="name"
                       type="text"
                       required
+                      value={formData.name}
+                      onChange={handleChange}
                       placeholder="Your name"
                       className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-900 dark:text-white"
                     />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-gray-900 dark:text-white mb-2 block">
+                    <label htmlFor="email" className="text-sm font-medium text-gray-900 dark:text-white mb-2 block">
                       Email *
                     </label>
                     <input
+                      id="email"
+                      name="email"
                       type="email"
                       required
+                      value={formData.email}
+                      onChange={handleChange}
                       placeholder="you@example.com"
                       className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-900 dark:text-white"
                     />
@@ -109,11 +148,15 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="text-sm font-medium text-gray-900 dark:text-white mb-2 block">
+                  <label htmlFor="subject" className="text-sm font-medium text-gray-900 dark:text-white mb-2 block">
                     Subject *
                   </label>
                   <select
+                    id="subject"
+                    name="subject"
                     required
+                    value={formData.subject}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-900 dark:text-white"
                   >
                     <option value="">Select a topic</option>
@@ -127,12 +170,16 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="text-sm font-medium text-gray-900 dark:text-white mb-2 block">
+                  <label htmlFor="message" className="text-sm font-medium text-gray-900 dark:text-white mb-2 block">
                     Message *
                   </label>
                   <textarea
+                    id="message"
+                    name="message"
                     required
                     rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="How can we help you?"
                     className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-900 dark:text-white resize-none"
                   />
