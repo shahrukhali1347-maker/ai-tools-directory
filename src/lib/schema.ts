@@ -210,7 +210,7 @@ export function generateOrganizationSchema() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer support',
-      email: 'hello@bestaitools4u.com',
+      email: 'info@bestaitools4u.com',
       url: `${SITE_CONFIG.url}/contact`,
       availableLanguage: 'English',
     },
@@ -437,11 +437,11 @@ export function generateContactSchema() {
     '@id': `${SITE_CONFIG.url}/#organization`,
     name: SITE_CONFIG.name,
     url: SITE_CONFIG.url,
-    email: 'hello@bestaitools4u.com',
+    email: 'info@bestaitools4u.com',
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      email: 'hello@bestaitools4u.com',
+      email: 'info@bestaitools4u.com',
       availableLanguage: 'English',
     },
     address: {

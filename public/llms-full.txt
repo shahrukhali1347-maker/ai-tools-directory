@@ -22,11 +22,11 @@
 
 ### Company
 - [About Us](https://bestaitools4u.com/about): Best AI Tools's mission to help individuals, teams, and businesses navigate the rapidly evolving AI landscape. Covers the company's core values: comprehensive directory curation, unbiased reviews, community-driven ratings, and continuous updates. Based in San Francisco, CA.
-- [Contact](https://bestaitools4u.com/contact): Contact form with subject options (General Inquiry, Tool Submission, Feedback, Partnership, Report Bug). Also includes direct email (hello@bestaitools4u.com), response time commitment (24-48 hours), and a FAQ section covering common questions about tool submissions, review process, listing updates, and sponsored placements.
+- [Contact](https://bestaitools4u.com/contact): Contact form with subject options (General Inquiry, Tool Submission, Feedback, Partnership, Report Bug). Also includes direct email (info@bestaitools4u.com), response time commitment (24-48 hours), and a FAQ section covering common questions about tool submissions, review process, listing updates, and sponsored placements.
 - [Submit a Tool](https://bestaitools4u.com/submit): Submission form for AI tool creators and companies to get their tools listed in the directory. Requires tool name, website URL, description, category, pricing model, and contact email. Submissions are reviewed within 2-3 business days.
 
 ### Legal
-- [Privacy Policy](https://bestaitools4u.com/privacy): Comprehensive privacy policy covering data collection practices, cookie usage, third-party services, data security measures, user rights (access, correction, deletion, portability), children's privacy, and contact information for privacy inquiries (privacy@bestaitools4u.com).
+- [Privacy Policy](https://bestaitools4u.com/privacy): Comprehensive privacy policy covering data collection practices, cookie usage, third-party services, data security measures, user rights (access, correction, deletion, portability), children's privacy, and contact information for privacy inquiries (info@bestaitools4u.com).
 - [Terms of Service](https://bestaitools4u.com/terms): Terms and conditions governing use of the platform, including user responsibilities, tool listing disclaimers, intellectual property rights, user submission licenses, warranty disclaimers, liability limitations, and governing law (California, USA).
 
 ## Categories
@@ -91,9 +91,9 @@ A: Our team tests each tool and considers user feedback, features, pricing, and 
 
 ## Contact
 
-- Email: hello@bestaitools4u.com
-- Privacy: privacy@bestaitools4u.com
-- Legal: legal@bestaitools4u.com
+- Email: info@bestaitools4u.com
+- Privacy: info@bestaitools4u.com
+- Legal: info@bestaitools4u.com
 - Location: San Francisco, CA
 - Response time: Within 24-48 hours
 
