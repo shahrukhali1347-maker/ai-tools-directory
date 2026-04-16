@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Star, ExternalLink, CheckCircle, TrendingUp, Calendar, Eye, Bookmark, Share2 } from 'lucide-react';
+import { Star, ExternalLink, CheckCircle, TrendingUp, Calendar, Eye } from 'lucide-react';
 import { aiTools, getToolBySlug, getRelatedTools } from '@/data/tools';
 import { getCategoryBySlug } from '@/data/categories';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
@@ -129,7 +129,6 @@ export default async function ToolPage({ params }: ToolPageProps) {
                     <div className="flex flex-wrap items-center gap-4 text-sm">
                       <Rating
                         value={tool.rating.average}
-                        count={tool.rating.count}
                         size="md"
                       />
                       <Badge
@@ -160,14 +159,6 @@ export default async function ToolPage({ params }: ToolPageProps) {
                       <ExternalLink className="w-4 h-4 ml-2" />
                     </Button>
                   </a>
-                  <Button variant="outline" size="lg">
-                    <Bookmark className="w-4 h-4 mr-2" />
-                    Save
-                  </Button>
-                  <Button variant="outline" size="lg">
-                    <Share2 className="w-4 h-4 mr-2" />
-                    Share
-                  </Button>
                 </div>
               </div>
 
@@ -268,15 +259,6 @@ export default async function ToolPage({ params }: ToolPageProps) {
                     </span>
                     <span className="font-semibold text-gray-900 dark:text-white">
                       {formatNumber(tool.visits)}
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600 dark:text-gray-400 flex items-center gap-2">
-                      <Bookmark className="w-4 h-4" />
-                      Bookmarks
-                    </span>
-                    <span className="font-semibold text-gray-900 dark:text-white">
-                      {formatNumber(tool.bookmarks)}
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
