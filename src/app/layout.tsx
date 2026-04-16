@@ -31,9 +31,8 @@ export const metadata: Metadata = {
   creator: SITE_CONFIG.name,
   publisher: SITE_CONFIG.name,
   metadataBase: new URL(SITE_CONFIG.url),
-  alternates: {
-    canonical: '/',
-  },
+  // NOTE: No root canonical here — each page sets its own via alternates.canonical
+  // to avoid Next.js rendering duplicate <link rel="canonical"> tags
   // openGraph.images and twitter.images come from src/app/opengraph-image.tsx + twitter-image.tsx convention files
   openGraph: {
     type: 'website',
