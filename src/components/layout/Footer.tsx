@@ -41,7 +41,7 @@ export default function Footer() {
               </div>
               <div>
                 <span className="text-xl font-bold text-gray-900 dark:text-white block">
-                  AI Tools Hub
+                  Best AI Tools
                 </span>
                 <span className="text-sm text-gray-500 dark:text-gray-400">
                   Your AI discovery platform

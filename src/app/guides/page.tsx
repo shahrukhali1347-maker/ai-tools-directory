@@ -6,19 +6,19 @@ import StructuredData from '@/components/seo/StructuredData';
 import { generateGuidesListSchema, generateWebPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'AI Guides & Tutorials | AI Tools Hub',
+  title: 'AI Guides & Tutorials | Best AI Tools',
   description: 'Step-by-step AI guides and tutorials covering writing, image generation, coding, and more. Learn to use AI tools effectively and boost productivity.',
   alternates: {
     canonical: '/guides',
   },
   openGraph: {
-    title: 'AI Guides & Tutorials | AI Tools Hub',
+    title: 'AI Guides & Tutorials | Best AI Tools',
     description: 'Step-by-step AI guides and tutorials covering writing, image generation, coding, and more. Learn to use AI tools effectively and boost productivity.',
     url: '/guides',
     type: 'website',
   },
   twitter: {
-    title: 'AI Guides & Tutorials | AI Tools Hub',
+    title: 'AI Guides & Tutorials | Best AI Tools',
     description: 'Step-by-step AI guides and tutorials covering writing, image generation, coding, and more. Learn to use AI tools effectively and boost productivity.',
   },
 };

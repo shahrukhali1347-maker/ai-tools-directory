@@ -3,21 +3,21 @@ import StructuredData from '@/components/seo/StructuredData';
 import { generateFAQSchema, generateContactSchema, generateWebPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Contact AI Tools Hub | Get in Touch',
-  description: 'Get in touch with the AI Tools Hub team. Submit your AI tool, ask questions, report issues, or explore partnership opportunities.',
+  title: 'Contact Best AI Tools | Get in Touch',
+  description: 'Get in touch with the Best AI Tools team. Submit your AI tool, ask questions, report issues, or explore partnership opportunities.',
   keywords: ['contact', 'AI tools', 'submit tool', 'partnership'],
   alternates: {
     canonical: '/contact',
   },
   openGraph: {
-    title: 'Contact AI Tools Hub',
-    description: 'Get in touch with the AI Tools Hub team. Submit your tool, ask questions, or explore partnership opportunities.',
+    title: 'Contact Best AI Tools',
+    description: 'Get in touch with the Best AI Tools team. Submit your tool, ask questions, or explore partnership opportunities.',
     url: '/contact',
     type: 'website',
   },
   twitter: {
-    title: 'Contact AI Tools Hub',
-    description: 'Get in touch with the AI Tools Hub team. Submit your tool, ask questions, or explore partnership opportunities.',
+    title: 'Contact Best AI Tools',
+    description: 'Get in touch with the Best AI Tools team. Submit your tool, ask questions, or explore partnership opportunities.',
   },
 };
 
@@ -57,8 +57,8 @@ export default function ContactLayout({
     <>
       {/* WebPage + FAQ Schema for contact page */}
       <StructuredData data={generateWebPageSchema({
-        name: 'Contact AI Tools Hub | Get in Touch',
-        description: 'Get in touch with the AI Tools Hub team. Submit your AI tool, ask questions, report issues, or explore partnership opportunities.',
+        name: 'Contact Best AI Tools | Get in Touch',
+        description: 'Get in touch with the Best AI Tools team. Submit your AI tool, ask questions, report issues, or explore partnership opportunities.',
         url: '/contact',
       })} />
       <StructuredData data={generateFAQSchema(contactFaqs)} />

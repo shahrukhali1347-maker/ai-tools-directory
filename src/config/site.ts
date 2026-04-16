@@ -1,7 +1,7 @@
 import { SiteConfig } from '@/types';
 
 export const SITE_CONFIG: SiteConfig = {
-  name: "AI Tools Hub",
+  name: "Best AI Tools",
   description: "Discover, compare, and choose from 2000+ AI tools across 50+ categories. Find the perfect AI solution for your needs with detailed reviews, comparisons, and implementation guides.",
   url: "https://bestaitools4u.com",
   ogImage: "https://bestaitools4u.com/og-image.jpg",

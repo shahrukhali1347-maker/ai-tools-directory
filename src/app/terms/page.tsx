@@ -5,20 +5,20 @@ import StructuredData from '@/components/seo/StructuredData';
 import { generateWebPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | AI Tools Hub',
-  description: 'Read the terms and conditions for using AI Tools Hub. Understand your rights and responsibilities when accessing our AI tools directory.',
+  title: 'Terms of Service | Best AI Tools',
+  description: 'Read the terms and conditions for using Best AI Tools. Understand your rights and responsibilities when accessing our AI tools directory.',
   alternates: {
     canonical: '/terms',
   },
   openGraph: {
-    title: 'Terms of Service | AI Tools Hub',
-    description: 'Read the terms and conditions for using AI Tools Hub. Understand your rights and responsibilities when accessing our AI tools directory.',
+    title: 'Terms of Service | Best AI Tools',
+    description: 'Read the terms and conditions for using Best AI Tools. Understand your rights and responsibilities when accessing our AI tools directory.',
     url: '/terms',
     type: 'website',
   },
   twitter: {
-    title: 'Terms of Service | AI Tools Hub',
-    description: 'Read the terms and conditions for using AI Tools Hub. Understand your rights and responsibilities when accessing our AI tools directory.',
+    title: 'Terms of Service | Best AI Tools',
+    description: 'Read the terms and conditions for using Best AI Tools. Understand your rights and responsibilities when accessing our AI tools directory.',
   },
 };
 
@@ -26,8 +26,8 @@ export default function TermsPage() {
   return (
     <>
     <StructuredData data={generateWebPageSchema({
-      name: 'Terms of Service | AI Tools Hub',
-      description: 'Read the terms and conditions for using AI Tools Hub and our AI tools directory.',
+      name: 'Terms of Service | Best AI Tools',
+      description: 'Read the terms and conditions for using Best AI Tools and our AI tools directory.',
       url: '/terms',
     })} />
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -57,13 +57,13 @@ export default function TermsPage() {
         <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 prose dark:prose-invert max-w-none">
           <h2>1. Acceptance of Terms</h2>
           <p>
-            By accessing and using AI Tools Hub (&quot;the Website&quot;), you accept and agree to be bound by
+            By accessing and using Best AI Tools (&quot;the Website&quot;), you accept and agree to be bound by
             these Terms of Service. If you do not agree to these terms, please do not use our website.
           </p>
 
           <h2>2. Description of Service</h2>
           <p>
-            AI Tools Hub is a directory and information platform that helps users discover, compare,
+            Best AI Tools is a directory and information platform that helps users discover, compare,
             and learn about AI tools. We provide:
           </p>
           <ul>
@@ -96,7 +96,7 @@ export default function TermsPage() {
 
           <h2>5. Intellectual Property</h2>
           <p>
-            All content on AI Tools Hub, including text, graphics, logos, and software, is owned by
+            All content on Best AI Tools, including text, graphics, logos, and software, is owned by
             us or our licensors and is protected by copyright and other intellectual property laws.
             You may not:
           </p>
@@ -129,7 +129,7 @@ export default function TermsPage() {
 
           <h2>8. Limitation of Liability</h2>
           <p>
-            To the maximum extent permitted by law, AI Tools Hub shall not be liable for any indirect,
+            To the maximum extent permitted by law, Best AI Tools shall not be liable for any indirect,
             incidental, special, or consequential damages arising from your use of the website or
             reliance on any information provided.
           </p>

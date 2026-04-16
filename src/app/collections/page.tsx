@@ -6,19 +6,19 @@ import StructuredData from '@/components/seo/StructuredData';
 import { generateCollectionsListSchema, generateWebPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Curated AI Tool Collections | AI Tools Hub',
+  title: 'Curated AI Tool Collections | Best AI Tools',
   description: 'Explore curated collections of the best AI tools for startups, developers, writers, marketers, and researchers. Find tools organized by use case and workflow.',
   alternates: {
     canonical: '/collections',
   },
   openGraph: {
-    title: 'Curated AI Tool Collections | AI Tools Hub',
+    title: 'Curated AI Tool Collections | Best AI Tools',
     description: 'Explore curated collections of the best AI tools for startups, developers, writers, marketers, and researchers. Find tools organized by use case and workflow.',
     url: '/collections',
     type: 'website',
   },
   twitter: {
-    title: 'Curated AI Tool Collections | AI Tools Hub',
+    title: 'Curated AI Tool Collections | Best AI Tools',
     description: 'Explore curated collections of the best AI tools for startups, developers, writers, marketers, and researchers. Find tools organized by use case and workflow.',
   },
 };

@@ -41,7 +41,7 @@ export const guides: Guide[] = [
     ],
     datePublished: '2024-01-15',
     dateUpdated: '2025-01-29',
-    author: 'AI Tools Hub Team',
+    author: 'Best AI Tools Team',
     views: 125000,
   },
   {
@@ -84,7 +84,7 @@ export const guides: Guide[] = [
     ],
     datePublished: '2024-02-01',
     dateUpdated: '2025-01-29',
-    author: 'AI Tools Hub Team',
+    author: 'Best AI Tools Team',
     views: 89000,
   },
   {
@@ -127,7 +127,7 @@ export const guides: Guide[] = [
     ],
     datePublished: '2024-03-01',
     dateUpdated: '2025-01-29',
-    author: 'AI Tools Hub Team',
+    author: 'Best AI Tools Team',
     views: 67000,
   },
 ];

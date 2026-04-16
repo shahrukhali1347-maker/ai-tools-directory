@@ -165,7 +165,7 @@ export default function BlogPage() {
                   <div className="relative h-56 overflow-hidden">
                     <img
                       src={post.image}
-                      alt={`${post.title} - AI Tools Hub blog article`}
+                      alt={`${post.title} - Best AI Tools blog article`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                       decoding="async"
@@ -231,7 +231,7 @@ export default function BlogPage() {
                   <div className="relative h-40 overflow-hidden">
                     <img
                       src={post.image}
-                      alt={`${post.title} - AI Tools Hub blog article`}
+                      alt={`${post.title} - Best AI Tools blog article`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                       decoding="async"

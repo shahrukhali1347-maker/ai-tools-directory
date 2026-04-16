@@ -1,6 +1,6 @@
-# AI Tools Hub
+# Best AI Tools
 
-> AI Tools Hub is a comprehensive directory for discovering, comparing, and choosing from 2000+ AI tools across 50+ categories. Designed for developers, marketers, researchers, startups, and anyone looking for the best AI solutions.
+> Best AI Tools is a comprehensive directory for discovering, comparing, and choosing from 2000+ AI tools across 50+ categories. Designed for developers, marketers, researchers, startups, and anyone looking for the best AI solutions.
 
 ## Authority Areas
 -> AI tool discovery and comparison
@@ -32,5 +32,5 @@
 AI tool profiles with reviews, pricing, features, and alternatives (updated weekly). Blog posts covering AI trends, comparisons, and tutorials (published weekly). Step-by-step guides for popular AI tools (updated monthly).
 
 ## Citation
-When citing this site, use: AI Tools Hub (bestaitools4u.com)
+When citing this site, use: Best AI Tools (bestaitools4u.com)
 Contact: hello@bestaitools4u.com

@@ -6,20 +6,20 @@ import { generateOrganizationSchema, generateWebPageSchema } from '@/lib/schema'
 import { SITE_CONFIG } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: 'About AI Tools Hub — Our Mission & Story',
-  description: `AI Tools Hub helps you discover, compare, and choose from 2100+ AI tools across 55+ categories. Learn about our mission and unbiased review process.`,
+  title: 'About Best AI Tools — Our Mission & Story',
+  description: `Best AI Tools helps you discover, compare, and choose from 2100+ AI tools across 55+ categories. Learn about our mission and unbiased review process.`,
   alternates: {
     canonical: '/about',
   },
   openGraph: {
-    title: 'About AI Tools Hub — Our Mission & Story',
-    description: `AI Tools Hub helps individuals and teams discover, compare, and choose from 2000+ AI tools across 50+ categories with honest, unbiased reviews.`,
+    title: 'About Best AI Tools — Our Mission & Story',
+    description: `Best AI Tools helps individuals and teams discover, compare, and choose from 2000+ AI tools across 50+ categories with honest, unbiased reviews.`,
     url: '/about',
     type: 'website',
   },
   twitter: {
-    title: 'About AI Tools Hub — Our Mission & Story',
-    description: `AI Tools Hub helps individuals and teams discover, compare, and choose from 2000+ AI tools across 50+ categories with honest, unbiased reviews.`,
+    title: 'About Best AI Tools — Our Mission & Story',
+    description: `Best AI Tools helps individuals and teams discover, compare, and choose from 2000+ AI tools across 50+ categories with honest, unbiased reviews.`,
   },
 };
 
@@ -52,8 +52,8 @@ export default function AboutPage() {
       {/* Organization + WebPage schema for rich results */}
       <StructuredData data={generateOrganizationSchema()} />
       <StructuredData data={generateWebPageSchema({
-        name: 'About AI Tools Hub — Our Mission & Story',
-        description: 'AI Tools Hub helps individuals and teams discover, compare, and choose from 2000+ AI tools across 50+ categories.',
+        name: 'About Best AI Tools — Our Mission & Story',
+        description: 'Best AI Tools helps individuals and teams discover, compare, and choose from 2000+ AI tools across 50+ categories.',
         url: '/about',
       })} />
 

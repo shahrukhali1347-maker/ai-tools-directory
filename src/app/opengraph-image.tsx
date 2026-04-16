@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 import { SITE_CONFIG } from '@/config/site';
 
 export const runtime = 'edge';
-export const alt = 'AI Tools Hub - Discover & Compare 2000+ AI Tools';
+export const alt = 'Best AI Tools - Discover & Compare 2000+ AI Tools';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 

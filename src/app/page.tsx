@@ -10,19 +10,19 @@ import { generateFAQSchema, generateWebPageSchema } from '@/lib/schema';
 import { getGeneralFAQs } from '@/data/faqs';
 
 export const metadata: Metadata = {
-  title: { absolute: 'AI Tools Hub - Discover & Compare the Best AI Tools' },
+  title: { absolute: 'Best AI Tools - Discover & Compare the Best AI Tools' },
   description: 'Discover, compare, and choose from 2000+ AI tools across 50+ categories. Find the perfect AI solution with reviews, pricing, and expert guides.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'AI Tools Hub - Discover & Compare the Best AI Tools',
+    title: 'Best AI Tools - Discover & Compare the Best AI Tools',
     description: 'Discover, compare, and choose from 2000+ AI tools across 50+ categories. Find the perfect AI solution with reviews, pricing, and expert guides.',
     url: '/',
     type: 'website',
   },
   twitter: {
-    title: 'AI Tools Hub - Discover & Compare the Best AI Tools',
+    title: 'Best AI Tools - Discover & Compare the Best AI Tools',
     description: 'Discover, compare, and choose from 2000+ AI tools across 50+ categories. Find the perfect AI solution with reviews, pricing, and expert guides.',
   },
 };
@@ -34,7 +34,7 @@ export default function Home() {
     <>
       {/* WebPage + FAQ Schema for rich results */}
       <StructuredData data={generateWebPageSchema({
-        name: 'AI Tools Hub - Discover & Compare the Best AI Tools',
+        name: 'Best AI Tools - Discover & Compare the Best AI Tools',
         description: 'Discover, compare, and choose from 2000+ AI tools across 50+ categories. Find the perfect AI solution with reviews, pricing, and expert guides.',
         url: '/',
       })} />

@@ -4,7 +4,7 @@ import { Home, Search } from 'lucide-react';
 import Button from '@/components/ui/Button';
 
 export const metadata: Metadata = {
-  title: 'Page Not Found | AI Tools Hub',
+  title: 'Page Not Found | Best AI Tools',
   description: 'The page you are looking for could not be found. Browse our directory of 2100+ AI tools or return to the homepage.',
   robots: {
     index: false,

@@ -5,20 +5,20 @@ import StructuredData from '@/components/seo/StructuredData';
 import { generateWebPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | AI Tools Hub',
-  description: 'Learn how AI Tools Hub collects, uses, and protects your personal information. Read our data privacy practices and your rights.',
+  title: 'Privacy Policy | Best AI Tools',
+  description: 'Learn how Best AI Tools collects, uses, and protects your personal information. Read our data privacy practices and your rights.',
   alternates: {
     canonical: '/privacy',
   },
   openGraph: {
-    title: 'Privacy Policy | AI Tools Hub',
-    description: 'Learn how AI Tools Hub collects, uses, and protects your personal information. Read our data privacy practices and your rights.',
+    title: 'Privacy Policy | Best AI Tools',
+    description: 'Learn how Best AI Tools collects, uses, and protects your personal information. Read our data privacy practices and your rights.',
     url: '/privacy',
     type: 'website',
   },
   twitter: {
-    title: 'Privacy Policy | AI Tools Hub',
-    description: 'Learn how AI Tools Hub collects, uses, and protects your personal information. Read our data privacy practices and your rights.',
+    title: 'Privacy Policy | Best AI Tools',
+    description: 'Learn how Best AI Tools collects, uses, and protects your personal information. Read our data privacy practices and your rights.',
   },
 };
 
@@ -26,8 +26,8 @@ export default function PrivacyPage() {
   return (
     <>
     <StructuredData data={generateWebPageSchema({
-      name: 'Privacy Policy | AI Tools Hub',
-      description: 'Learn how AI Tools Hub collects, uses, and protects your personal information.',
+      name: 'Privacy Policy | Best AI Tools',
+      description: 'Learn how Best AI Tools collects, uses, and protects your personal information.',
       url: '/privacy',
     })} />
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -57,7 +57,7 @@ export default function PrivacyPage() {
         <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 prose dark:prose-invert max-w-none">
           <h2>1. Introduction</h2>
           <p>
-            Welcome to AI Tools Hub (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We are committed to protecting your personal
+            Welcome to Best AI Tools (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We are committed to protecting your personal
             information and your right to privacy. This Privacy Policy explains how we collect, use, disclose,
             and safeguard your information when you visit our website.
           </p>

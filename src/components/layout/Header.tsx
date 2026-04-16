@@ -27,7 +27,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
-                AI Tools Hub
+                Best AI Tools
               </span>
               <span className="text-[10px] text-gray-500 dark:text-gray-400 font-medium -mt-0.5">
                 Discover the best AI tools
