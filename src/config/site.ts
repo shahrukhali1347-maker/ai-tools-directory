@@ -11,7 +11,7 @@ export const SITE_CONFIG: SiteConfig = {
     youtube: "https://youtube.com/@bestaitools4u",
   },
   analytics: {
-    googleAnalyticsId: "G-XXXXXXXXXX",
+    googleAnalyticsId: "G-06ZHNQ8FG8",
   },
   stats: {
     toolsCount: 2100,
