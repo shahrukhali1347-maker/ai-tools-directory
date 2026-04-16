@@ -12,7 +12,7 @@ export const categories: Category[] = [
     toolCount: 20,
     popular: true,
     seo: {
-      metaTitle: 'Best AI Chatbots & Conversational AI Tools (2025)',
+      metaTitle: 'Best AI Chatbots & Conversational AI Tools (2026)',
       metaDescription: 'Discover the best AI chatbots including ChatGPT, Claude, Gemini, and more. Compare features, pricing, and find the perfect conversational AI for your needs.',
       keywords: ['ai chatbot', 'chatgpt', 'conversational ai', 'virtual assistant', 'ai assistant'],
     },
@@ -28,7 +28,7 @@ export const categories: Category[] = [
     toolCount: 20,
     popular: true,
     seo: {
-      metaTitle: 'Best AI Image Generators - Midjourney, DALL-E & More (2025)',
+      metaTitle: 'Best AI Image Generators - Midjourney, DALL-E & More (2026)',
       metaDescription: 'Explore top AI image generators including Midjourney, DALL-E, Stable Diffusion, and more. Create stunning AI art and visuals.',
       keywords: ['ai image generator', 'midjourney', 'dall-e', 'stable diffusion', 'ai art', 'text to image'],
     },
@@ -44,7 +44,7 @@ export const categories: Category[] = [
     toolCount: 20,
     popular: true,
     seo: {
-      metaTitle: 'Best AI Writing & Content Creation Tools (2025)',
+      metaTitle: 'Best AI Writing & Content Creation Tools (2026)',
       metaDescription: 'Find the best AI writing tools for content creation, copywriting, and blogging. Compare Jasper, Copy.ai, Grammarly, and more.',
       keywords: ['ai writing tool', 'content creation', 'copywriting ai', 'blog writing', 'ai content generator'],
     },
@@ -60,7 +60,7 @@ export const categories: Category[] = [
     toolCount: 20,
     popular: true,
     seo: {
-      metaTitle: 'Best AI Coding Assistants - GitHub Copilot, Cursor & More (2025)',
+      metaTitle: 'Best AI Coding Assistants - GitHub Copilot, Cursor & More (2026)',
       metaDescription: 'Discover the best AI coding assistants for developers. Compare GitHub Copilot, Cursor, Tabnine, and other AI programming tools.',
       keywords: ['ai coding assistant', 'github copilot', 'cursor', 'code completion', 'ai programming'],
     },
@@ -76,7 +76,7 @@ export const categories: Category[] = [
     toolCount: 10,
     popular: true,
     seo: {
-      metaTitle: 'Best AI Video Generation & Editing Tools (2025)',
+      metaTitle: 'Best AI Video Generation & Editing Tools (2026)',
       metaDescription: 'Create stunning videos with AI. Explore Runway, Synthesia, HeyGen, and other AI video tools for content creation.',
       keywords: ['ai video generator', 'ai video editing', 'runway', 'synthesia', 'video creation'],
     },
@@ -92,7 +92,7 @@ export const categories: Category[] = [
     toolCount: 10,
     popular: true,
     seo: {
-      metaTitle: 'Best AI Voice & Music Generation Tools (2025)',
+      metaTitle: 'Best AI Voice & Music Generation Tools (2026)',
       metaDescription: 'Discover AI tools for voice generation, music creation, and audio editing. Explore ElevenLabs, Suno, and more.',
       keywords: ['ai voice generator', 'ai music', 'text to speech', 'elevenlabs', 'ai audio'],
     },
@@ -108,7 +108,7 @@ export const categories: Category[] = [
     toolCount: 20,
     popular: true,
     seo: {
-      metaTitle: 'Best AI Productivity & Automation Tools (2025)',
+      metaTitle: 'Best AI Productivity & Automation Tools (2026)',
       metaDescription: 'Boost productivity with AI tools for task management, scheduling, and automation. Compare Notion AI, Zapier, and more.',
       keywords: ['ai productivity', 'automation tools', 'task management ai', 'workflow automation', 'notion ai'],
     },
@@ -124,7 +124,7 @@ export const categories: Category[] = [
     toolCount: 10,
     popular: true,
     seo: {
-      metaTitle: 'Best AI Research & Analysis Tools (2025)',
+      metaTitle: 'Best AI Research & Analysis Tools (2026)',
       metaDescription: 'Find AI tools for research, document analysis, and academic work. Explore Elicit, Consensus, and other research AI.',
       keywords: ['ai research tool', 'research assistant', 'document analysis', 'academic ai', 'paper research'],
     },
@@ -140,7 +140,7 @@ export const categories: Category[] = [
     toolCount: 10,
     popular: true,
     seo: {
-      metaTitle: 'Best AI Design & UI/UX Tools (2025)',
+      metaTitle: 'Best AI Design & UI/UX Tools (2026)',
       metaDescription: 'Discover AI tools for design, UI generation, and creative work. Explore Figma AI, Canva AI, and more.',
       keywords: ['ai design tool', 'ui design ai', 'figma ai', 'canva ai', 'ai graphics'],
     },
@@ -156,7 +156,7 @@ export const categories: Category[] = [
     toolCount: 10,
     popular: true,
     seo: {
-      metaTitle: 'Best AI Marketing & SEO Tools (2025)',
+      metaTitle: 'Best AI Marketing & SEO Tools (2026)',
       metaDescription: 'Optimize your marketing with AI. Explore Surfer SEO, Jasper, and other AI tools for content marketing and SEO.',
       keywords: ['ai marketing', 'seo tools', 'content marketing ai', 'surfer seo', 'ai copywriting'],
     },
@@ -172,7 +172,7 @@ export const categories: Category[] = [
     toolCount: 10,
     popular: true,
     seo: {
-      metaTitle: 'Best AI Data & Analytics Tools (2025)',
+      metaTitle: 'Best AI Data & Analytics Tools (2026)',
       metaDescription: 'Discover top AI analytics and data tools. Compare platforms for data analysis, visualization, and business intelligence.',
       keywords: ['ai analytics', 'data analysis ai', 'business intelligence', 'ai data tools', 'data visualization'],
     },
@@ -188,7 +188,7 @@ export const categories: Category[] = [
     toolCount: 10,
     popular: true,
     seo: {
-      metaTitle: 'Best AI Customer Support Tools (2025)',
+      metaTitle: 'Best AI Customer Support Tools (2026)',
       metaDescription: 'Automate customer service with AI. Explore chatbots, help desks, and support platforms powered by artificial intelligence.',
       keywords: ['ai customer support', 'ai helpdesk', 'customer service ai', 'chatbot support', 'ai ticketing'],
     },
@@ -204,7 +204,7 @@ export const categories: Category[] = [
     toolCount: 10,
     popular: true,
     seo: {
-      metaTitle: 'Best AI Education & Learning Tools (2025)',
+      metaTitle: 'Best AI Education & Learning Tools (2026)',
       metaDescription: 'Discover AI tutoring, study assistants, and learning platforms. Personalized education powered by artificial intelligence.',
       keywords: ['ai education', 'ai tutoring', 'learning ai', 'study assistant', 'ai teacher'],
     },
@@ -220,7 +220,7 @@ export const categories: Category[] = [
     toolCount: 10,
     popular: true,
     seo: {
-      metaTitle: 'Best AI Sales & CRM Tools (2025)',
+      metaTitle: 'Best AI Sales & CRM Tools (2026)',
       metaDescription: 'Boost sales with AI-powered CRM, lead scoring, and outreach tools. Compare the best AI sales platforms.',
       keywords: ['ai sales', 'ai crm', 'lead generation ai', 'sales automation', 'ai outreach'],
     },
@@ -236,7 +236,7 @@ export const categories: Category[] = [
     toolCount: 10,
     popular: true,
     seo: {
-      metaTitle: 'Best AI Healthcare & Wellness Tools (2025)',
+      metaTitle: 'Best AI Healthcare & Wellness Tools (2026)',
       metaDescription: 'Explore AI tools for health monitoring, mental wellness, medical imaging, and fitness. AI-powered healthcare solutions.',
       keywords: ['ai healthcare', 'ai wellness', 'health ai', 'medical ai', 'mental health ai'],
     },

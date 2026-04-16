@@ -46,7 +46,7 @@ export default function PrivacyPage() {
             </h1>
             <div className="flex items-center justify-center gap-2 text-gray-400">
               <Calendar className="w-4 h-4" />
-              Last updated: January 1, 2025
+              Last updated: April 1, 2026
             </div>
           </div>
         </div>

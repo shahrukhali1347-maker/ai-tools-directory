@@ -16,7 +16,7 @@ export const faqs: FAQ[] = [
   },
   {
     id: '3',
-    question: 'What is the best AI chatbot in 2025?',
+    question: 'What is the best AI chatbot in 2026?',
     answer: 'The best AI chatbot depends on your needs. ChatGPT (GPT-4) excels at general tasks and coding. Claude is known for safety and long-form content. Gemini offers strong multimodal capabilities. Perplexity is best for research with citations.',
     category: 'chatbots',
   },
