@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Sparkles, Twitter, Linkedin, Youtube, Github, Heart, ArrowUpRight } from 'lucide-react';
+import { Sparkles, Mail, Heart, ArrowUpRight } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site';
 
 const footerLinks = {
@@ -52,26 +52,14 @@ export default function Footer() {
               Discover, compare, and choose from {SITE_CONFIG.stats.toolsCount.toLocaleString()}+ AI tools.
               Find the perfect solution for your workflow.
             </p>
-            {/* Social links */}
-            <div className="flex gap-2">
-              {[
-                { icon: Twitter, href: SITE_CONFIG.social.twitter, label: 'Twitter' },
-                { icon: Linkedin, href: SITE_CONFIG.social.linkedin, label: 'LinkedIn' },
-                { icon: Youtube, href: SITE_CONFIG.social.youtube, label: 'YouTube' },
-                { icon: Github, href: '#', label: 'GitHub' },
-              ].map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 rounded-xl bg-white dark:bg-gray-800 text-gray-500 hover:text-purple-600 dark:hover:text-purple-400 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-300 hover:scale-110 shadow-sm"
-                  aria-label={label}
-                >
-                  <Icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
+            {/* Contact email */}
+            <a
+              href="mailto:info@bestaitools4u.com"
+              className="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+            >
+              <Mail className="w-4 h-4" />
+              info@bestaitools4u.com
+            </a>
           </div>
 
           {/* Product links */}
