@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@aitoolshub',
-    creator: '@aitoolshub',
+    site: '@bestaitools4u',
+    creator: '@bestaitools4u',
     title: `${SITE_CONFIG.name} - Discover the Best AI Tools`,
     description: defaultDescription,
   },

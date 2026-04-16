@@ -15,7 +15,7 @@ interface SubmitFormData {
   email: string;
 }
 
-const SUBMISSION_EMAIL = 'hello@aitoolshub.com';
+const SUBMISSION_EMAIL = 'hello@bestaitools4u.com';
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 const ACCEPTED_IMAGE_TYPES = ['image/png', 'image/jpeg', 'image/jpg', 'image/webp', 'image/svg+xml'];
 
@@ -136,7 +136,7 @@ export default function SubmitPage() {
         `⚠ LOGO ATTACHED: Please attach "${logoFile.name}" (${(logoFile.size / 1024).toFixed(0)}KB) to this email before sending.`
       );
     }
-    bodyLines.push('', '---', 'Submitted via aitoolshub.com/submit');
+    bodyLines.push('', '---', 'Submitted via bestaitools4u.com/submit');
     const body = bodyLines.join('\n');
 
     const mailtoLink = `mailto:${SUBMISSION_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;

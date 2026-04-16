@@ -74,7 +74,7 @@ export default async function OpengraphImage() {
             letterSpacing: '0.02em',
           }}
         >
-          aitoolshub.com
+          bestaitools4u.com
         </div>
       </div>
     ),

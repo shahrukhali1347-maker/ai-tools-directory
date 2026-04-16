@@ -164,7 +164,7 @@ export default function TermsPage() {
             For questions about these Terms of Service, please contact us at:
           </p>
           <ul>
-            <li>Email: legal@aitoolshub.com</li>
+            <li>Email: legal@bestaitools4u.com</li>
             <li>Address: San Francisco, CA, USA</li>
           </ul>
         </div>

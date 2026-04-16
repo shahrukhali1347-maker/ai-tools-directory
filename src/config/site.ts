@@ -3,12 +3,12 @@ import { SiteConfig } from '@/types';
 export const SITE_CONFIG: SiteConfig = {
   name: "AI Tools Hub",
   description: "Discover, compare, and choose from 2000+ AI tools across 50+ categories. Find the perfect AI solution for your needs with detailed reviews, comparisons, and implementation guides.",
-  url: "https://aitoolshub.com",
-  ogImage: "https://aitoolshub.com/og-image.jpg",
+  url: "https://www.bestaitools4u.com",
+  ogImage: "https://www.bestaitools4u.com/og-image.jpg",
   social: {
-    twitter: "https://twitter.com/aitoolshub",
-    linkedin: "https://linkedin.com/company/aitoolshub",
-    youtube: "https://youtube.com/@aitoolshub",
+    twitter: "https://twitter.com/bestaitools4u",
+    linkedin: "https://linkedin.com/company/bestaitools4u",
+    youtube: "https://youtube.com/@bestaitools4u",
   },
   analytics: {
     googleAnalyticsId: "G-XXXXXXXXXX",

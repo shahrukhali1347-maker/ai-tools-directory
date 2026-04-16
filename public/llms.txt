@@ -12,25 +12,25 @@
 ## Key Pages
 
 ### Core
-- [Homepage](https://aitoolshub.com/): Main landing page with featured tools, trending tools, category overview, and search
-- [AI Tools Directory](https://aitoolshub.com/tools): Full searchable directory with filters for category, pricing, platform, and rating
-- [Categories](https://aitoolshub.com/categories): Browse all 10 major AI tool categories
-- [Collections](https://aitoolshub.com/collections): Curated lists of AI tools for specific use cases
-- [Guides & Tutorials](https://aitoolshub.com/guides): Step-by-step tutorials for using AI tools effectively
-- [Blog](https://aitoolshub.com/blog): AI news, reviews, comparisons, and industry insights
+- [Homepage](https://bestaitools4u.com/): Main landing page with featured tools, trending tools, category overview, and search
+- [AI Tools Directory](https://bestaitools4u.com/tools): Full searchable directory with filters for category, pricing, platform, and rating
+- [Categories](https://bestaitools4u.com/categories): Browse all 10 major AI tool categories
+- [Collections](https://bestaitools4u.com/collections): Curated lists of AI tools for specific use cases
+- [Guides & Tutorials](https://bestaitools4u.com/guides): Step-by-step tutorials for using AI tools effectively
+- [Blog](https://bestaitools4u.com/blog): AI news, reviews, comparisons, and industry insights
 
 ### Company
-- [About Us](https://aitoolshub.com/about): Mission, values, and what we do
-- [Contact](https://aitoolshub.com/contact): Get in touch, submit tools, partnerships
-- [Submit a Tool](https://aitoolshub.com/submit): Submit your AI tool for inclusion in the directory
+- [About Us](https://bestaitools4u.com/about): Mission, values, and what we do
+- [Contact](https://bestaitools4u.com/contact): Get in touch, submit tools, partnerships
+- [Submit a Tool](https://bestaitools4u.com/submit): Submit your AI tool for inclusion in the directory
 
 ### Legal
-- [Privacy Policy](https://aitoolshub.com/privacy): Data privacy practices and user rights
-- [Terms of Service](https://aitoolshub.com/terms): Terms and conditions for using the platform
+- [Privacy Policy](https://bestaitools4u.com/privacy): Data privacy practices and user rights
+- [Terms of Service](https://bestaitools4u.com/terms): Terms and conditions for using the platform
 
 ## Content Types
 AI tool profiles with reviews, pricing, features, and alternatives (updated weekly). Blog posts covering AI trends, comparisons, and tutorials (published weekly). Step-by-step guides for popular AI tools (updated monthly).
 
 ## Citation
-When citing this site, use: AI Tools Hub (aitoolshub.com)
-Contact: hello@aitoolshub.com
+When citing this site, use: AI Tools Hub (bestaitools4u.com)
+Contact: hello@bestaitools4u.com

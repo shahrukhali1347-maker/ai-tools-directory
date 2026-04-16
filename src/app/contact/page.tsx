@@ -163,7 +163,7 @@ export default function ContactPage() {
                   <Mail className="w-5 h-5 text-purple-600 mt-0.5" />
                   <div>
                     <p className="font-medium text-gray-900 dark:text-white">Email</p>
-                    <p className="text-gray-600 dark:text-gray-400">hello@aitoolshub.com</p>
+                    <p className="text-gray-600 dark:text-gray-400">hello@bestaitools4u.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

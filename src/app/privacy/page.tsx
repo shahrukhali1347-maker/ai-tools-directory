@@ -137,7 +137,7 @@ export default function PrivacyPage() {
             If you have questions about this Privacy Policy, please contact us at:
           </p>
           <ul>
-            <li>Email: privacy@aitoolshub.com</li>
+            <li>Email: privacy@bestaitools4u.com</li>
             <li>Address: San Francisco, CA, USA</li>
           </ul>
         </div>
