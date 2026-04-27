@@ -40,9 +40,14 @@ export function applyFilters(tools: AITool[], filters: SearchFilters): AITool[] 
     filtered.sort((a, b) => {
       switch (filters.sortBy) {
         case 'popular':
-          return b.visits - a.visits;
+          // Popular = featured/trending tools first, with rating tiebreaker, then newer IDs
+          if (a.featured !== b.featured) return a.featured ? -1 : 1;
+          if (a.trending !== b.trending) return a.trending ? -1 : 1;
+          if (b.rating.average !== a.rating.average) return b.rating.average - a.rating.average;
+          return parseInt(b.id, 10) - parseInt(a.id, 10);
         case 'newest':
-          return new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime();
+          // Higher IDs are added later (dateAdded is identical for all tools)
+          return parseInt(b.id, 10) - parseInt(a.id, 10);
         case 'rating':
           return b.rating.average - a.rating.average;
         case 'name':
