@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Star, ExternalLink, CheckCircle, TrendingUp, Calendar, Eye } from 'lucide-react';
+import { ExternalLink, CheckCircle, TrendingUp, Calendar } from 'lucide-react';
 import { aiTools, getToolBySlug, getRelatedTools } from '@/data/tools';
 import { getCategoryBySlug } from '@/data/categories';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
@@ -12,7 +12,7 @@ import Button from '@/components/ui/Button';
 import Rating from '@/components/ui/Rating';
 import ToolCard from '@/components/tools/ToolCard';
 import { generateToolSchema, generateWebPageSchema } from '@/lib/schema';
-import { formatDate, formatNumber, getPricingLabel } from '@/lib/utils';
+import { formatDate, getPricingLabel } from '@/lib/utils';
 import { SITE_CONFIG } from '@/config/site';
 
 interface ToolPageProps {
@@ -246,28 +246,39 @@ export default async function ToolPage({ params }: ToolPageProps) {
                 </div>
               </div>
 
-              {/* Stats card */}
+              {/* Tool info card */}
               <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
                 <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
-                  Statistics
+                  Tool Info
                 </h2>
                 <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600 dark:text-gray-400 flex items-center gap-2">
-                      <Eye className="w-4 h-4" />
-                      Monthly Visits
-                    </span>
-                    <span className="font-semibold text-gray-900 dark:text-white">
-                      {formatNumber(tool.visits)}
-                    </span>
-                  </div>
+                  {tool.verified && (
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-600 dark:text-gray-400 flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4" />
+                        Status
+                      </span>
+                      <span className="font-semibold text-emerald-600 dark:text-emerald-400">
+                        Verified
+                      </span>
+                    </div>
+                  )}
                   <div className="flex items-center justify-between">
                     <span className="text-gray-600 dark:text-gray-400 flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
                       Added
                     </span>
                     <span className="font-semibold text-gray-900 dark:text-white">
-                      {formatDate(tool.dateAdded)}
+                      <time dateTime={tool.dateAdded}>{formatDate(tool.dateAdded)}</time>
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-600 dark:text-gray-400 flex items-center gap-2">
+                      <Calendar className="w-4 h-4" />
+                      Last reviewed
+                    </span>
+                    <span className="font-semibold text-gray-900 dark:text-white">
+                      <time dateTime={tool.dateUpdated}>{formatDate(tool.dateUpdated)}</time>
                     </span>
                   </div>
                 </div>

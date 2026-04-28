@@ -24,9 +24,10 @@ export const SITE_CONFIG: SiteConfig = {
 export const NAV_LINKS = [
   { label: "Tools", href: "/tools" },
   { label: "Categories", href: "/categories" },
+  { label: "Compare", href: "/compare" },
   { label: "Collections", href: "/collections" },
   { label: "Guides", href: "/guides" },
-  { label: "Submit Tool", href: "/submit" },
+  { label: "Submit", href: "/submit" },
 ];
 
 export const FEATURED_CATEGORIES = [

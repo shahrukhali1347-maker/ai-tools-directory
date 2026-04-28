@@ -1,12 +1,16 @@
 'use client';
 
-import { Sparkles, Users, Star, Layers } from 'lucide-react';
-import { SITE_CONFIG } from '@/config/site';
+import { Sparkles, RefreshCw, Layers, Zap } from 'lucide-react';
+import { aiTools } from '@/data/tools';
+import { categories } from '@/data/categories';
+
+const verifiedCount = aiTools.filter((t) => t.verified).length;
+const featuredCount = aiTools.filter((t) => t.featured).length;
 
 const stats = [
   {
     icon: Sparkles,
-    value: SITE_CONFIG.stats.toolsCount.toLocaleString() + '+',
+    value: aiTools.length.toString() + '+',
     label: 'AI Tools',
     gradient: 'from-blue-500 to-cyan-500',
     bgGradient: 'from-blue-500/10 to-cyan-500/10',
@@ -14,24 +18,24 @@ const stats = [
   },
   {
     icon: Layers,
-    value: SITE_CONFIG.stats.categoriesCount.toString() + '+',
+    value: categories.length.toString(),
     label: 'Categories',
     gradient: 'from-purple-500 to-pink-500',
     bgGradient: 'from-purple-500/10 to-pink-500/10',
     shadowColor: 'shadow-purple-500/20',
   },
   {
-    icon: Star,
-    value: SITE_CONFIG.stats.reviewsCount.toLocaleString() + '+',
-    label: 'Reviews',
+    icon: Zap,
+    value: featuredCount.toString(),
+    label: 'Editor’s Picks',
     gradient: 'from-yellow-500 to-orange-500',
     bgGradient: 'from-yellow-500/10 to-orange-500/10',
     shadowColor: 'shadow-yellow-500/20',
   },
   {
-    icon: Users,
-    value: SITE_CONFIG.stats.usersCount.toLocaleString() + '+',
-    label: 'Monthly Users',
+    icon: RefreshCw,
+    value: verifiedCount.toString(),
+    label: 'Verified',
     gradient: 'from-green-500 to-emerald-500',
     bgGradient: 'from-green-500/10 to-emerald-500/10',
     shadowColor: 'shadow-green-500/20',
@@ -50,10 +54,10 @@ export default function StatsSection() {
         {/* Section title */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Trusted by Thousands
+            Curated. Verified. Updated.
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            Join our growing community of AI enthusiasts
+            Every tool reviewed by our editors before listing
           </p>
         </div>
 

@@ -3,6 +3,20 @@ import { aiTools } from '@/data/tools';
 import { categories } from '@/data/categories';
 import { SITE_CONFIG } from '@/config/site';
 
+const COMPARE_COMBOS: Array<[string, string]> = [
+  ['chatgpt', 'claude'], ['chatgpt', 'gemini'], ['claude', 'gemini'],
+  ['chatgpt', 'perplexity'], ['claude', 'deepseek'], ['claude', 'mistral-le-chat'],
+  ['chatgpt', 'microsoft-copilot'], ['gemini', 'grok'], ['perplexity', 'phind'],
+  ['cursor', 'github-copilot'], ['cursor', 'windsurf'], ['cursor', 'v0'],
+  ['v0', 'bolt-new'], ['windsurf', 'aider'], ['github-copilot', 'tabnine'],
+  ['github-copilot', 'codeium'], ['cursor', 'devin'],
+  ['midjourney', 'dall-e'], ['midjourney', 'stable-diffusion'], ['midjourney', 'flux-ai'],
+  ['dall-e', 'leonardo-ai'], ['krea-ai', 'pika'],
+  ['jasper', 'copy-ai'], ['grammarly', 'quillbot'], ['notion-ai', 'jasper'],
+  ['runway', 'pika'], ['synthesia', 'heygen'],
+  ['notion-ai', 'mem'], ['otter-ai', 'fireflies'], ['raycast-ai', 'superhuman'],
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_CONFIG.url;
 
@@ -21,9 +35,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/tools`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
     { url: `${baseUrl}/categories`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/collections`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/compare`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/guides`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
   ];
+
+  // Comparison pages — high SEO value
+  const comparePages: MetadataRoute.Sitemap = COMPARE_COMBOS.map(([a, b]) => ({
+    url: `${baseUrl}/compare/${a}-vs-${b}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }));
 
   // Secondary pages
   const secondaryPages: MetadataRoute.Sitemap = [
@@ -32,8 +55,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/submit`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
   ];
 
-  // Legal pages
+  // Legal & trust pages
   const legalPages: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/methodology`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${baseUrl}/disclosure`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
     { url: `${baseUrl}/privacy`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
     { url: `${baseUrl}/terms`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
   ];
@@ -54,5 +79,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...homepage, ...corePages, ...secondaryPages, ...legalPages, ...toolPages, ...categoryPages];
+  return [...homepage, ...corePages, ...comparePages, ...secondaryPages, ...legalPages, ...toolPages, ...categoryPages];
 }

@@ -1,134 +1,39 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Newspaper, Clock, ArrowRight, User, Calendar, TrendingUp } from 'lucide-react';
+import { Newspaper, ArrowRight, Bell, Sparkles } from 'lucide-react';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 import StructuredData from '@/components/seo/StructuredData';
-import { generateBlogListSchema, generateWebPageSchema } from '@/lib/schema';
+import { generateWebPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'AI Tools Blog - News, Reviews & Tutorials',
-  description: 'Stay updated with the latest AI news, tool reviews, tutorials, and industry insights. Learn how to use AI tools effectively.',
+  title: 'AI Tools Blog - Coming Soon',
+  description: 'In-depth AI tool reviews, comparisons, and tutorials are launching soon. Subscribe to be the first to read our editorial coverage.',
   keywords: ['AI blog', 'AI news', 'AI tutorials', 'AI tool reviews', 'artificial intelligence'],
   alternates: {
     canonical: '/blog',
   },
   openGraph: {
-    title: 'AI Tools Blog - News, Reviews & Tutorials',
-    description: 'Stay updated with the latest AI news, tool reviews, tutorials, and industry insights.',
+    title: 'AI Tools Blog - Coming Soon | Best AI Tools',
+    description: 'In-depth AI tool reviews and comparisons are launching soon.',
     url: '/blog',
     type: 'website',
   },
   twitter: {
-    title: 'AI Tools Blog - News, Reviews & Tutorials',
-    description: 'Stay updated with the latest AI news, tool reviews, tutorials, and industry insights.',
+    title: 'AI Tools Blog - Coming Soon | Best AI Tools',
+    description: 'In-depth AI tool reviews and comparisons are launching soon.',
   },
 };
-
-const posts = [
-  {
-    id: 1,
-    title: 'The Rise of AI Agents: What You Need to Know in 2026',
-    excerpt: 'AI agents are transforming how we work. Learn about the latest developments and how to leverage them.',
-    category: 'Trends',
-    readTime: '6 min read',
-    author: 'Sarah Johnson',
-    date: '2026-03-28',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
-    featured: true,
-    slug: 'rise-of-ai-agents-2026',
-  },
-  {
-    id: 2,
-    title: 'Claude vs ChatGPT: A Comprehensive Comparison',
-    excerpt: 'We compare the two leading AI assistants to help you choose the right one for your needs.',
-    category: 'Comparison',
-    readTime: '10 min read',
-    author: 'Mike Chen',
-    date: '2026-03-25',
-    image: 'https://images.unsplash.com/photo-1676277791608-ac5a5752a65a?w=600&h=400&fit=crop',
-    featured: true,
-    slug: 'claude-vs-chatgpt-comparison',
-  },
-  {
-    id: 3,
-    title: '10 AI Tools That Will Boost Your Productivity',
-    excerpt: 'Discover the AI tools that are helping professionals work smarter, not harder.',
-    category: 'Productivity',
-    readTime: '8 min read',
-    author: 'Emily Watson',
-    date: '2026-03-22',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-    featured: false,
-    slug: '10-ai-productivity-tools',
-  },
-  {
-    id: 4,
-    title: 'How to Create Stunning Images with Midjourney v6',
-    excerpt: 'A step-by-step guide to mastering Midjourney v6 for professional image generation.',
-    category: 'Tutorial',
-    readTime: '12 min read',
-    author: 'Lisa Park',
-    date: '2026-03-20',
-    image: 'https://images.unsplash.com/photo-1547954575-855750c57bd3?w=600&h=400&fit=crop',
-    featured: false,
-    slug: 'midjourney-v6-guide',
-  },
-  {
-    id: 5,
-    title: 'The Future of AI in Content Creation',
-    excerpt: 'Exploring how AI is reshaping content creation and what it means for creators.',
-    category: 'Insights',
-    readTime: '7 min read',
-    author: 'David Kim',
-    date: '2026-03-18',
-    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop',
-    featured: false,
-    slug: 'future-ai-content-creation',
-  },
-  {
-    id: 6,
-    title: 'Best Free AI Tools You Should Try Today',
-    excerpt: 'You don\'t need a big budget to use AI. Here are the best free tools available.',
-    category: 'Lists',
-    readTime: '5 min read',
-    author: 'Alex Rivera',
-    date: '2026-03-15',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-    featured: false,
-    slug: 'best-free-ai-tools',
-  },
-];
-
-const featuredPosts = posts.filter(p => p.featured);
-const regularPosts = posts.filter(p => !p.featured);
-
-// Format date for display
-function formatDate(dateStr: string) {
-  return new Date(dateStr).toLocaleDateString('en-US', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
-  });
-}
 
 export default function BlogPage() {
   return (
     <>
-      {/* WebPage + Blog schema for rich results */}
       <StructuredData data={generateWebPageSchema({
-        name: 'AI Tools Blog - News, Reviews & Tutorials',
-        description: 'Stay updated with the latest AI news, tool reviews, tutorials, and industry insights. Learn how to use AI tools effectively.',
+        name: 'AI Tools Blog - Coming Soon',
+        description: 'In-depth AI tool reviews, comparisons, and tutorials are launching soon.',
         url: '/blog',
       })} />
-      <StructuredData data={generateBlogListSchema(posts.map(p => ({
-        title: p.title,
-        excerpt: p.excerpt,
-        slug: p.slug,
-        date: p.date,
-      })))} />
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-        {/* Hero Section */}
         <div className="bg-gradient-to-br from-rose-900 via-pink-900 to-purple-900 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs items={[{ label: 'Blog', href: '/blog' }]} variant="light" />
@@ -136,135 +41,66 @@ export default function BlogPage() {
             <div className="mt-8 text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white/80 text-sm mb-6">
                 <Newspaper className="w-4 h-4" />
-                Latest Articles
+                Editorial coverage launching soon
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 AI Tools Blog
               </h1>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                News, reviews, tutorials, and insights about the world of AI tools.
+                Long-form reviews, side-by-side comparisons, and the stories behind the AI tools that actually ship.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          {/* Featured Posts */}
-          <div className="mb-16">
-            <div className="flex items-center gap-2 mb-8">
-              <TrendingUp className="w-5 h-5 text-purple-600" />
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Featured Articles</h2>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 sm:p-12 text-center">
+            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+              <Bell className="w-8 h-8 text-white" />
             </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {featuredPosts.map((post) => (
-                <article
-                  key={post.id}
-                  className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="relative h-56 overflow-hidden">
-                    <img
-                      src={post.image}
-                      alt={`${post.title} - Best AI Tools blog article`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                      decoding="async"
-                      width={600}
-                      height={400}
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-purple-600 text-white text-xs font-semibold rounded-full">
-                        {post.category}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400 mb-3">
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-3 h-3" />
-                        {post.readTime}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-3 h-3" />
-                        {formatDate(post.date)}
-                      </span>
-                    </div>
-
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
-                      {post.title}
-                    </h3>
-
-                    <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
-                      {post.excerpt}
-                    </p>
-
-                    <div className="flex items-center justify-between">
-                      <span className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                        <User className="w-4 h-4" />
-                        {post.author}
-                      </span>
-                      <Link
-                        href={`/blog/${post.slug}`}
-                        className="flex items-center gap-1 text-purple-600 dark:text-purple-400 text-sm font-medium hover:gap-2 transition-all"
-                      >
-                        Read more
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </article>
-              ))}
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3">
+              We&apos;re working on the first issue
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto">
+              Rather than rushing thin listicles, we&apos;re building a small set of deeply-researched AI tool reviews — each one tested for at least 20 hours by our editors before publishing. The first batch launches with our newsletter.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 max-w-md mx-auto mb-8 text-left">
+              <div className="flex items-start gap-3">
+                <Sparkles className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-sm text-gray-900 dark:text-white">Real testing</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">No paid placements</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Sparkles className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-sm text-gray-900 dark:text-white">Honest verdicts</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">Limitations included</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Sparkles className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-sm text-gray-900 dark:text-white">Side-by-side data</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">Pricing, features, perf</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Sparkles className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-sm text-gray-900 dark:text-white">Updated quarterly</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">Not a stale archive</p>
+                </div>
+              </div>
             </div>
-          </div>
-
-          {/* Regular Posts */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Latest Articles</h2>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {regularPosts.map((post) => (
-                <article
-                  key={post.id}
-                  className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
-                >
-                  <div className="relative h-40 overflow-hidden">
-                    <img
-                      src={post.image}
-                      alt={`${post.title} - Best AI Tools blog article`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                      decoding="async"
-                      width={600}
-                      height={400}
-                    />
-                  </div>
-
-                  <div className="p-5">
-                    <div className="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400 mb-2">
-                      <span className="text-purple-600 dark:text-purple-400 font-medium">{post.category}</span>
-                      <span>{post.readTime}</span>
-                    </div>
-
-                    <h3 className="text-base font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors line-clamp-2">
-                      {post.title}
-                    </h3>
-
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
-                      {post.excerpt}
-                    </p>
-
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="flex items-center gap-1 text-purple-600 dark:text-purple-400 text-sm font-medium hover:gap-2 transition-all"
-                    >
-                      Read more
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
-                </article>
-              ))}
-            </div>
+            <Link
+              href="/tools"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all"
+            >
+              Browse the Tools Directory
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </div>
