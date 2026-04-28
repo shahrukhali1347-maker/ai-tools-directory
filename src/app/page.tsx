@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import HeroSection from '@/components/home/HeroSection';
 import FeaturedTools from '@/components/home/FeaturedTools';
+import RecentlyAdded from '@/components/home/RecentlyAdded';
 import CategoriesGrid from '@/components/home/CategoriesGrid';
 import TrendingTools from '@/components/home/TrendingTools';
 import StatsSection from '@/components/home/StatsSection';
@@ -42,6 +43,7 @@ export default function Home() {
 
       <HeroSection />
       <FeaturedTools />
+      <RecentlyAdded />
       <CategoriesGrid />
       <TrendingTools />
       <StatsSection />

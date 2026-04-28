@@ -51,17 +51,21 @@ export default function Header() {
 
           {/* Right side actions */}
           <div className="flex items-center gap-3">
-            {/* Search button */}
-            <Link
-              href="/tools"
+            {/* Search button — opens Cmd+K palette */}
+            <button
+              type="button"
+              onClick={() => {
+                window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', metaKey: true, ctrlKey: true }));
+              }}
               className="hidden sm:flex items-center gap-2 px-4 py-2 text-sm text-gray-500 dark:text-gray-400 bg-gray-100/80 dark:bg-gray-800/80 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-xl transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50 hover:border-purple-300 dark:hover:border-purple-600 group"
+              aria-label="Open search"
             >
               <Search className="w-4 h-4 group-hover:text-purple-500 transition-colors" />
               <span className="group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors">Search tools...</span>
               <kbd className="hidden lg:inline-flex items-center px-2 py-0.5 text-xs bg-white dark:bg-gray-700 rounded-md border border-gray-200 dark:border-gray-600 shadow-sm">
-                /
+                ⌘K
               </kbd>
-            </Link>
+            </button>
 
             <ThemeToggle />
 
