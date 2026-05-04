@@ -176,13 +176,16 @@ export default function SubmitPage() {
           <div className="mt-8 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white/80 text-sm mb-6">
               <Sparkles className="w-4 h-4" />
-              Get Featured
+              Paid Listings Only
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Submit Your AI Tool
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Get your AI tool discovered by thousands of users looking for the perfect solution.
+            </p>
+            <p className="mt-4 inline-block px-4 py-2 bg-amber-500/20 border border-amber-400/40 rounded-lg text-amber-100 text-sm font-medium">
+              Note: We currently accept paid submissions only. We&apos;ll reply with details after we review your tool.
             </p>
           </div>
         </div>
@@ -199,8 +202,7 @@ export default function SubmitPage() {
               Thank You for Your Submission!
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              We&apos;ve received your tool submission. Our team will review it within 2-3 business days
-              and notify you once it&apos;s approved.
+              We&apos;ve received your tool submission. Our team will review it within 2-3 business days and email you back with paid listing details and next steps.
             </p>
             <Button onClick={resetForm}>
               Submit Another Tool
@@ -209,6 +211,11 @@ export default function SubmitPage() {
         ) : (
           <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
             <div className="space-y-6">
+              <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-sm text-amber-800 dark:text-amber-300">
+                <strong className="block mb-1">Paid submissions only</strong>
+                We currently accept paid listings only. After you submit the form below, our team will review your tool and reply with placement details and next steps within 2-3 business days.
+              </div>
+
               {error && (
                 <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-sm text-red-700 dark:text-red-400">
                   {error}
@@ -447,8 +454,7 @@ export default function SubmitPage() {
               </Button>
 
               <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-                By submitting, you agree to our terms and confirm that you have the right to list this tool.
-                Your default email client will open with the pre-filled submission.
+                By submitting, you agree to our terms and confirm that you have the right to list this tool. Listings are paid only — we&apos;ll email you with details after reviewing your submission.
               </p>
             </div>
           </form>
